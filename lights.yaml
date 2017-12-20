@@ -1,0 +1,5 @@
+  - platform: flux_led
+    automatic_add: False
+    devices:
+      192.168.86.102:
+        name: Tall Office Lamp

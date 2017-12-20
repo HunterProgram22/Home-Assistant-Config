@@ -1,0 +1,23 @@
+office:
+  name: Office
+  entities:
+    - light.tall_office_lamp
+    - light.desk_lamp
+    - switch.office_outlet
+
+garage:
+  name: Garage
+  entities:
+    - light.garage_left
+    - light.garage_right
+
+porch:
+  name: Porch
+  entities:
+    - light.porch_left
+    - light.porch_right
+
+master_bedroom:
+  name: Master Bedroom
+  entities:
+    - light.reading_lamp
