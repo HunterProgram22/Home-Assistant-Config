@@ -1,0 +1,9 @@
+- alias: random_flux_living_room_lamp
+  trigger:
+    platform: time
+    seconds: '/45'
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.tall_office_lamp
+      effect: random
