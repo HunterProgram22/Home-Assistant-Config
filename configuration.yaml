@@ -26,7 +26,7 @@ updater:
 
 
 discovery:
-  
+
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -43,9 +43,9 @@ map:
 # Track the sun
 sun:
 
-# Weather prediction
-sensor:
-  - platform: yr
+
+sensor: !include sensors.yaml 
+
 
 # Text to speech
 tts:

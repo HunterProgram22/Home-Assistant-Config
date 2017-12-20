@@ -1,0 +1,8 @@
+  - platform: yr
+
+  - platform: google_wifi
+    name: Google Wifi
+
+  - platform: crimereports
+    name: Daily Crime
+    radius: 5000
