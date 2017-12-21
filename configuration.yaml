@@ -44,8 +44,11 @@ map:
 sun:
 
 
-sensor: !include sensors.yaml 
+sensor: !include sensors.yaml
 
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 192.168.86.0/150
 
 # Text to speech
 tts:
