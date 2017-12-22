@@ -1,12 +1,13 @@
-default_view:
-  view: yes
-  icon: mdi:home
-  entities:
-    - group.office
-    - group.garage
-    - group.porch
-    - group.master_bedroom
-    - group.rec_room
+# default_view:
+#   view: yes
+#   icon: mdi:home
+#   entities:
+#     - group.office
+#     - group.garage
+#     - group.porch
+#     - group.master_bedroom
+#     - group.rec_room
+#     - group.automationgroup
 
 office:
   name: Office
