@@ -2,6 +2,9 @@
 
   - platform: google_wifi
     name: Google Wifi
+    monitored_conditions:
+      - uptime
+      - status
 
   - platform: crimereports
     name: Daily Crime
