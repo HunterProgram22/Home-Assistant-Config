@@ -28,6 +28,7 @@ updater:
 discovery:
 
 
+
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
@@ -44,7 +45,7 @@ map:
 sun:
 
 
-sensor: !include sensors.yaml 
+sensor: !include sensors.yaml
 
 
 # Text to speech
