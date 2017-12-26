@@ -1,8 +1,8 @@
   - platform: flux_led
     automatic_add: False
     devices:
-      192.168.86.102:
-        name: Tall Office Lamp
+      192.168.86.117:
+        name: Top Track Bulb
 
   - platform: decora_wifi
     username: !secret justin_email

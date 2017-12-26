@@ -13,8 +13,10 @@ office:
   name: Office
   entities:
     - light.tall_office_lamp
+    - light.top_track_bulb
+    - light.middle_track_bulb
     - light.desk_lamp
-    - switch.office_outlet
+
 
 garage:
   name: Garage
