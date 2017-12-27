@@ -39,3 +39,4 @@ rec_room:
   name: Rec Room
   entities:
     - light.rec_room_lights
+    - remote.rec_room_harmony

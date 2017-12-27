@@ -63,6 +63,11 @@ tts:
 # Cloud
 cloud:
 
+remote:
+  - platform: harmony
+    name: Rec Room Harmony
+    host: 192.168.86.118
+
 
 group: !include groups.yaml
 automation: !include automations.yaml
