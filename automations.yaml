@@ -18,12 +18,3 @@
     entity_id:
       - light.garage_left
       - light.garage_right
-
-- alias: 'Office Lights Off at Sunrise'
-  trigger:
-    platform: sun
-    event: sunrise
-  action:
-    service: light.turn_off
-    entity_id:
-      - light.desk_lamp
