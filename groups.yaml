@@ -15,6 +15,7 @@ office:
     - light.tall_office_lamp
     - light.top_track_bulb
     - light.middle_track_bulb
+    - light.bottom_track_bulb
     - light.desk_lamp
 
 
@@ -39,4 +40,5 @@ rec_room:
   name: Rec Room
   entities:
     - light.rec_room_lights
+    - switch.rec_room_outlet
     - remote.rec_room_harmony

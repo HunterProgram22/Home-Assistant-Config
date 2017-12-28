@@ -1,18 +1,28 @@
-alias: "Rec Room Chromecast"
-sequence:
-  - service: remote.watch_netflix
-    entity_id: remote.rec_room_harmony
-    data:
-      activity: "###" # Number for watch netflix activity
-  - service: light.turn_on
-    entity_id: light.rec_room_lights
-
-alias: "Red Alert"
-sequence:
-  - service: light.turn_on
-    entity_id:
-      - light.tall_office_lamp
-      - light.top_track_bulb
+red_alert:
+  alias: "Red Alert"
+  sequence:
+    - service: light.turn_on
+      entity_id:
+        - light.tall_office_lamp
+        - light.top_track_bulb
       data:
-        brightness: 100
         rgb_color: [255, 0, 0]
+        brightness_pct: 100
+    - service: tts.google_say
+      data:
+        entity_id: media_player.office_speaker
+        message: "Red Alert, Shields Up!"
+
+rec_room_chromecast:
+  alias: "Rec Room Chromecast"
+  sequence:
+    - service: remote.turn_on
+      entity_id: remote.rec_room_hub
+      data:
+        activity: "30665544"
+    - service: light.turn_on
+      entity_id: light.rec_room_lights
+      data:
+        brightness_pct: 1
+    - service: switch.turn_on
+      entity_id: switch.rec_room_outlet
