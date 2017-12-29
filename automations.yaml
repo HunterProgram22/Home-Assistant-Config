@@ -1,4 +1,4 @@
-- alias: 'Garage Lights Off at Sunrise'
+- alias: 'Front Lights Off at Sunrise'
   trigger:
     platform: sun
     event: sunrise
@@ -7,14 +7,22 @@
     entity_id:
       - light.garage_left
       - light.garage_right
+      - light.porch_left
+      - light.porch_right
 
-- alias: 'Garage Lights On at Sunset'
+- alias: 'Front Lights On at Sunset'
   trigger:
     platform: sun
     event: sunset
     offset: "-00:15:00"
   action:
-    service: light.turn_on
-    entity_id:
-      - light.garage_left
-      - light.garage_right
+    - service: light.turn_on
+      entity_id:
+        - light.garage_left
+        - light.garage_right
+    - service: light.turn_on
+      entity_id:
+        - light.porch_left
+        - light.porch_right
+      data:
+        rgb_color: [255, 0, 0]

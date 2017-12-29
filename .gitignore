@@ -2,6 +2,6 @@
 !*.yaml
 !scenes
 !.gitignore
-!/apps/*
+!/home/homeassistant/conf/*
 secrets.yaml
 known_devices.yaml
