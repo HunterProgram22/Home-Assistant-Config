@@ -13,8 +13,8 @@ red_alert:
         entity_id: media_player.office_speaker
         message: "Red Alert, Shields Up!"
 
-rec_room_chromecast:
-  alias: "Rec Room Chromecast"
+rec_room_chromecast_on:
+  alias: "Rec Room Chromecast On"
   sequence:
     - service: remote.turn_on
       entity_id: remote.rec_room_hub
@@ -26,3 +26,27 @@ rec_room_chromecast:
         brightness_pct: 1
     - service: switch.turn_on
       entity_id: switch.rec_room_outlet
+
+rec_room_chromecast_off:
+  alias: "Rec Room Chromecast Off"
+  sequence:
+    - service: remote.turn_off
+      entity_id: remote.rec_room_hub
+      data:
+        activity: "30665544"
+    - service: light.turn_off
+      entity_id: light.rec_room_lights
+    - service: switch.turn_off
+      entity_id: switch.rec_room_outlet
+
+rec_room_jeopardy:
+  alias: "Rec Room Jeopardy Time"
+  sequence:
+    - service: remote.turn_off
+      entity_id: remote.rec_room_hub
+      data:
+        activity: "#####" # Set up activity for jeopardy on harmony
+    - service: light.turn_on
+      entity_id: light.rec_room_lights
+      data:
+        brightness_pct: 25

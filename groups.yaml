@@ -1,23 +1,21 @@
-# default_view:
-#   view: yes
-#   icon: mdi:home
-#   entities:
-#     - group.office
-#     - group.garage
-#     - group.porch
-#     - group.master_bedroom
-#     - group.rec_room
-#     - group.automationgroup
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.all_lights
+    - group.all_switches
+    - group.all_scripts
+    - group.all_automations
 
 office:
   name: Office
+  view: yes
   entities:
     - light.tall_office_lamp
     - light.top_track_bulb
     - light.middle_track_bulb
     - light.bottom_track_bulb
     - light.desk_lamp
-
 
 garage:
   name: Garage
@@ -31,13 +29,22 @@ porch:
     - light.porch_left
     - light.porch_right
 
+perimeter:
+  name: Perimeter
+  view: yes
+  entities:
+    - group.garage
+    - group.porch
+
 master_bedroom:
   name: Master Bedroom
+  view: yes
   entities:
     - light.reading_lamp
 
 rec_room:
   name: Rec Room
+  view: yes
   entities:
     - light.rec_room_lights
     - switch.rec_room_outlet
