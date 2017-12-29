@@ -3,5 +3,6 @@
 !scenes
 !.gitignore
 !/conf/
+!/conf/apps/
 secrets.yaml
 known_devices.yaml
