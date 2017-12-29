@@ -2,6 +2,6 @@
 !*.yaml
 !scenes
 !.gitignore
-!/conf/*
+!/conf/
 secrets.yaml
 known_devices.yaml
