@@ -4,5 +4,6 @@
 !.gitignore
 !/conf/
 !/conf/apps/
+!*.py
 secrets.yaml
 known_devices.yaml
