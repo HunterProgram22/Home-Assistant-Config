@@ -46,15 +46,6 @@ sun:
 
 sensor: !include sensors.yaml
 
-# device_tracker:
-#   - platform: nmap_tracker
-#     track_new_devices: false
-#     hosts: 192.168.86.0/24
-#     home_interval: 10
-#     exclude:
-#       - 192.168.86.111
-
-
 # Text to speech
 tts:
   - platform: google
@@ -65,11 +56,11 @@ cloud:
 remote:
   - platform: harmony
     name: Rec Room Harmony
-    host: 192.168.86.118
+    host: !secret rec_room_harmony_ip
 
 hue:
   bridges:
-    - host: 192.168.86.110
+    - host: !secret hue_ip
 
 group: !include groups.yaml
 automation: !include automations.yaml

@@ -31,13 +31,13 @@
   trigger:
     platform: time
     at: '18:58:00'
-  condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
+  # condition: time
+  #   # weekday:
+  #   #   - mon
+  #   #   - tue
+  #   #   - wed
+  #   #   - thu
+  #   #   - fri
   action:
     service: script.turn_on
     entity_id: script.rec_room_jeopardy

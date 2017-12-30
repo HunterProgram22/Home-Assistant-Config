@@ -42,10 +42,10 @@ rec_room_chromecast_off:
 rec_room_jeopardy:
   alias: "Rec Room Jeopardy Time"
   sequence:
-    - service: remote.turn_off
+    - service: remote.turn_on
       entity_id: remote.rec_room_hub
       data:
-        activity: "#####" # Set up activity for jeopardy on harmony
+        activity: "30863949"
     - service: light.turn_on
       entity_id: light.rec_room_lights
       data:

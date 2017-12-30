@@ -1,5 +1,6 @@
 default_view:
   view: yes
+  name: Control
   icon: mdi:home
   entities:
     - group.all_lights
@@ -7,14 +8,15 @@ default_view:
     - group.all_scripts
     - group.all_automations
 
+
 office:
   name: Office
   view: yes
   entities:
     - light.tall_office_lamp
-    - light.top_track_bulb
-    - light.middle_track_bulb
-    - light.bottom_track_bulb
+    - light.top_track_light
+    - light.middle_track_light
+    - light.bottom_track_light
     - light.desk_lamp
 
 garage:
@@ -49,3 +51,15 @@ rec_room:
     - light.rec_room_lights
     - switch.rec_room_outlet
     - remote.rec_room_harmony
+
+media:
+  name: Media Players
+  view: yes
+  entities:
+    - media_player.office_speaker
+    - media_player.master_bedroom_speaker
+    - media_player.master_bedroom_tv
+    - media_player.great_room_speaker
+    - media_player.great_room_tv
+    - media_player.rec_room_speaker
+    - media_player.rec_room_tv

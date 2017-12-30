@@ -1,0 +1,11 @@
+group.all_lights:
+  hidden: false
+
+group.all_switches:
+  hidden: False
+
+group.all_scripts:
+  hidden: false
+
+group.all_automations:
+  hidden: False
