@@ -62,6 +62,10 @@ hue:
   bridges:
     - host: !secret hue_ip
 
+android_ip_webcam:
+  - name: 'Front Yard'
+    host: 192.168.86.141
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml

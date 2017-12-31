@@ -37,6 +37,7 @@ perimeter:
   entities:
     - group.garage
     - group.porch
+    - camera.front_yard
 
 master_bedroom:
   name: Master Bedroom
