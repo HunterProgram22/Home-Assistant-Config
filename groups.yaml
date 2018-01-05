@@ -53,6 +53,15 @@ rec_room:
     - switch.rec_room_outlet
     - remote.rec_room_harmony
 
+radio:
+  name: Home Radio
+  entities:
+    - input_select.radio_station
+    - input_select.chromecast_radio
+    - script.radio_play
+    - input_slider.volume_radio
+
+
 media:
   name: Media Players
   view: yes

@@ -1,5 +1,20 @@
-# sleep_sounds:
-#   name: Sleep Sounds
-#   options:
-#     - Nature Sounds
-#     - Ocean Sounds
+radio_station:
+  name: 'Select Radio Station:'
+  options:
+    - Radio 538
+    - Q-Music
+
+chromecast_radio:
+  name: 'Select Speakers:'
+  options:
+    - Office
+    - Great Room
+  initial: Office
+  icon: mdi:speaker-wireless
+
+volume_radio:
+  name: Volume
+  icon: mdi:volume-high
+  min: 0
+  max: 1
+  step: 0.05

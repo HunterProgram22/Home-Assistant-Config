@@ -50,3 +50,22 @@ rec_room_jeopardy:
       entity_id: light.rec_room_lights
       data:
         brightness_pct: 25
+
+radio_play:
+  alias: Play Radio on Chromecast Audio
+  sequence:
+    # - service: media_player.volume_set
+    #   data:
+    #     entity_id: media_player.ca_hall
+    #     volume_level: '0.35'
+  - service: media_player.play_media
+    data_template:
+      entity_id: >
+        {% if is_state("input_select.chromecast_radio", "Office") %} media_player.office_speaker
+        {% elif is_state("input_select.chromecast_radio", "Great Room") %} media_player.great_room_speaker
+        {% endif %}
+      media_content_id: >
+        {% if is_state("input_select.radio_station", "Radio 538") %} http://vip-icecast.538.lw.triple-it.nl:80/RADIO538_MP3
+        {% elif is_state("input_select.radio_station", "Q-Music") %} http://icecast-qmusic.cdp.triple-it.nl/Qmusic_nl_live_96.mp3
+        {% endif %}
+      media_content_type: 'audio/mp4'
