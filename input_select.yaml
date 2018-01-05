@@ -1,8 +1,8 @@
 radio_station:
   name: 'Select Radio Station:'
   options:
-    - Radio 538
-    - Q-Music
+    - ESPN Radio
+    - Symphony
 
 chromecast_radio:
   name: 'Select Speakers:'
