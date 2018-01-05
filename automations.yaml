@@ -26,18 +26,47 @@
         - light.porch_right
       data:
         rgb_color: [255, 0, 0]
+        brightness_pct: 100
 
 - alias: 'Jeopardy Time'
   trigger:
     platform: time
     at: '18:58:00'
-  # condition: time
-  #   # weekday:
-  #   #   - mon
-  #   #   - tue
-  #   #   - wed
-  #   #   - thu
-  #   #   - fri
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
   action:
     service: script.turn_on
     entity_id: script.rec_room_jeopardy
+
+- alias: 'Jeopardy Off'
+  trigger:
+    platform: time
+    at: '20:00:00'
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    service: script.turn_off
+    entity_id: script.rec_room_jeopardy
+
+- alias: 'Sleep Sounds'
+  trigger:
+    platform: time
+    at: '23:15:00'
+  action:
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.master_bedroom_speaker
+        media_content_id: http://orion.shoutca.st:8157/stream
+        media_content_type: audio/mp4
