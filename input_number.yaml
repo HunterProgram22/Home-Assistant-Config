@@ -4,3 +4,10 @@ volume_radio:
   min: .01
   max: 1
   step: .01
+
+sleep_sounds_run_time:
+  name: Sleep Sounds Timer
+  initial: 15
+  min: 1
+  max: 60
+  step: 1

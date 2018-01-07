@@ -58,6 +58,8 @@ remote:
     name: Rec Room Harmony
     host: !secret rec_room_harmony_ip
 
+
+
 hue:
   bridges:
     - host: !secret hue_ip
@@ -66,6 +68,11 @@ hue:
 # - name: 'Front Yard'
 #    host: 192.168.86.60
 #    scan_interval: 1
+
+wink:
+
+climate:
+  platform: wink
 
 media_player: !include media_player.yaml
 input_select: !include input_select.yaml

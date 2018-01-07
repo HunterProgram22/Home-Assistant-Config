@@ -86,3 +86,11 @@ sleep_sounds_play:
         {% elif is_state("input_select.sleep_ambient_sound", "Ocean Sounds") %} http://edge01.media.positivityradio.world:8081/positively/ocean/icecast.audio
         {% endif %}
       media_content_type: 'audio/mp4'
+
+sleep_sounds_timer:
+  alias: "Sleep Sounds Timer"
+  sequence:
+    - delay: '00:{{ states.input_number.sleep_sounds_run_time.state | int }}:00'
+    - service: homeassistant.turn_off
+      data:
+        entity_id: media_player.master_bedroom_speaker

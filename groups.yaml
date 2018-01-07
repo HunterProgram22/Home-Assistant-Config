@@ -7,6 +7,7 @@ default_view:
     - group.all_switches
     - group.all_scripts
     - group.all_automations
+    - climate.sensi_thermostat
 
 
 office:
@@ -70,6 +71,7 @@ sleep_sounds:
   entities:
     - input_select.sleep_ambient_sound
     - script.sleep_sounds_play
+    - input_number.sleep_sounds_run_time
 
 media:
   name: Media Players
