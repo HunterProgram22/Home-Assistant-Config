@@ -2,6 +2,10 @@ radio_station:
   name: 'Select Radio Station:'
   options:
     - ESPN Radio
+    - Detroit 97.1
+    - Columbus 97.1
+    - Techno for Programming
+    - Soundtracks Station
     - Symphony
 
 chromecast_radio:
@@ -10,6 +14,13 @@ chromecast_radio:
     - Office
     - Great Room
     - Whole Home
+    - Master Bedroom
+    - Rec Room
   initial: Office
   icon: mdi:speaker-wireless
 
+sleep_ambient_sound:
+  name: 'Select Ambient Sound:'
+  options:
+    - Nature Sounds
+    - Ocean Sounds

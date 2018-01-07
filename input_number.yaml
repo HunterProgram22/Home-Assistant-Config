@@ -1,0 +1,6 @@
+volume_radio:
+  name: Radio Volume
+  initial: .30
+  min: .01
+  max: 1
+  step: .01

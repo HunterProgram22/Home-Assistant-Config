@@ -18,6 +18,8 @@ office:
     - light.middle_track_light
     - light.bottom_track_light
     - light.desk_lamp
+    - media_player.office_speaker
+    - group.radio
 
 garage:
   name: Garage
@@ -44,6 +46,7 @@ master_bedroom:
   view: yes
   entities:
     - light.reading_lamp
+    - group.sleep_sounds
 
 rec_room:
   name: Rec Room
@@ -59,15 +62,19 @@ radio:
   entities:
     - input_select.radio_station
     - input_select.chromecast_radio
+    - input_number.volume_radio
     - script.radio_play
-    - input_slider.volume_radio
 
+sleep_sounds:
+  name: Sleep Sounds
+  entities:
+    - input_select.sleep_ambient_sound
+    - script.sleep_sounds_play
 
 media:
   name: Media Players
   view: yes
   entities:
-    - media_player.office_speaker
     - media_player.master_bedroom_speaker
     - media_player.master_bedroom_tv
     - media_player.great_room_speaker

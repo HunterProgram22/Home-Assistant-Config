@@ -69,6 +69,7 @@ hue:
 
 media_player: !include media_player.yaml
 input_select: !include input_select.yaml
+input_number: !include input_number.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml

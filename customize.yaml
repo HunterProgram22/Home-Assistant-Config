@@ -10,6 +10,12 @@ group.all_scripts:
 group.all_automations:
   hidden: False
 
+group.radio:
+  hidden: False
+
+group.sleep_sounds:
+  hidden: False
+
 script.radio_play:
   friendly_name: Start Playing
   icon: mdi:play
