@@ -55,6 +55,7 @@ rec_room:
 
 radio:
   name: Home Radio
+  view: yes
   entities:
     - input_select.radio_station
     - input_select.chromecast_radio

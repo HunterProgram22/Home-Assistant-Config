@@ -51,7 +51,7 @@ tts:
   - platform: google
 
 # Cloud
-cloud:
+# cloud:
 
 remote:
   - platform: harmony
@@ -62,10 +62,10 @@ hue:
   bridges:
     - host: !secret hue_ip
 
-android_ip_webcam:
-  - name: 'Front Yard'
-    host: 192.168.86.60
-    scan_interval: 01
+#android_ip_webcam:
+# - name: 'Front Yard'
+#    host: 192.168.86.60
+#    scan_interval: 1
 
 media_player: !include media_player.yaml
 input_select: !include input_select.yaml

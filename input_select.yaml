@@ -9,12 +9,7 @@ chromecast_radio:
   options:
     - Office
     - Great Room
+    - Whole Home
   initial: Office
   icon: mdi:speaker-wireless
 
-volume_radio:
-  name: Volume
-  icon: mdi:volume-high
-  min: 0
-  max: 1
-  step: 0.05
