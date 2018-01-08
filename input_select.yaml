@@ -7,6 +7,7 @@ radio_station:
     - Techno for Programming
     - Soundtracks Station
     - Symphony
+    - Classical
 
 chromecast_radio:
   name: 'Select Speakers:'
@@ -22,5 +23,10 @@ chromecast_radio:
 sleep_ambient_sound:
   name: 'Select Ambient Sound:'
   options:
-    - Nature Sounds
-    - Ocean Sounds
+    - Morning Seashore
+    - Forest Walk
+    - Summer Rain
+    - Mountain Stream
+    - Rainforest
+    - Wood Masted Sailboat
+    - Tropical Storm

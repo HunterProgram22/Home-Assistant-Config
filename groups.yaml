@@ -48,12 +48,16 @@ master_bedroom:
   entities:
     - light.reading_lamp
     - group.sleep_sounds
+    - media_player.master_bedroom_speaker
+    - media_player.master_bedroom_tv
 
 rec_room:
   name: Rec Room
   view: yes
   entities:
     - light.rec_room_lights
+    - media_player.rec_room_speaker
+    - media_player.rec_room_tv
     - switch.rec_room_outlet
     - remote.rec_room_harmony
 
@@ -77,9 +81,5 @@ media:
   name: Media Players
   view: yes
   entities:
-    - media_player.master_bedroom_speaker
-    - media_player.master_bedroom_tv
     - media_player.great_room_speaker
     - media_player.great_room_tv
-    - media_player.rec_room_speaker
-    - media_player.rec_room_tv
