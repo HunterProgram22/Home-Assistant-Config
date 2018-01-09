@@ -91,6 +91,6 @@ sleep_sounds_timer:
   alias: "Sleep Sounds Timer"
   sequence:
     - delay: '00:{{ states.input_number.sleep_sounds_run_time.state | int }}:00'
-    - service: homeassistant.turn_off
+    - service: media_player.turn_off
       data:
         entity_id: media_player.master_bedroom_speaker
