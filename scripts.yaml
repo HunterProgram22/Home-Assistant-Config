@@ -69,7 +69,8 @@ radio_play:
         {% elif is_state("input_select.radio_station", "Detroit 97.1") %} http://18773.live.streamtheworld.com:3690/WXYTFMAAC_SC?ua=RadioTime&amp;ttag=RadioTime&amp;DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2&amp;tdtok=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6ImZTeXA4In0.e
         {% elif is_state("input_select.radio_station", "Columbus 97.1") %} http://15113.live.streamtheworld.com:3690/WBNSFM_SC?ua=RadioTime&amp;ttag=RadioTime&amp;DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2
         {% elif is_state("input_select.radio_station", "Techno for Programming") %} http://icecast.pulsradio.com/pulsHD.mp3
-        {% elif is_state("input_select.radio_station", "Soundtracks Station") %} http://hi5.streamingsoundtracks.com/
+        {% elif is_state("input_select.radio_station", "Soundtracks Station") %} http://hi5.streamingsoundtracks.com:80/
+        {% elif is_state("input_select.radio_station", "Classical") %} http://198.105.216.204:8206/stream
         {% endif %}
       media_content_type: 'audio/mp4'
 
@@ -82,8 +83,13 @@ sleep_sounds_play:
       entity_id:
         - media_player.master_bedroom_speaker
       media_content_id: >
-        {% if is_state("input_select.sleep_ambient_sound", "Nature Sounds") %} http://orion.shoutca.st:8157/stream
-        {% elif is_state("input_select.sleep_ambient_sound", "Ocean Sounds") %} http://edge01.media.positivityradio.world:8081/positively/ocean/icecast.audio
+        {% if is_state("input_select.sleep_ambient_sound", "Morning Seashore") %} http://meditationroom.org/free-nature-sounds/morning-seashore-audio/morning-seashore.mp3
+        {% elif is_state("input_select.sleep_ambient_sound", "Forest Walk") %} http://meditationroom.org/free-nature-sounds/forest-walk-audio/forest-walk.mp3
+        {% elif is_state("input_select.sleep_ambient_sound", "Summer Rain") %} http://meditationroom.org/free-nature-sounds/summer-rain-audio/summer-rain.mp3
+        {% elif is_state("input_select.sleep_ambient_sound", "Mountain Stream") %} http://meditationroom.org/free-nature-sounds/mountain-stream-audio/mountain-stream.mp3
+        {% elif is_state("input_select.sleep_ambient_sound", "Rainforest") %} http://meditationroom.org/free-nature-sounds/rainforest-audio/rainforest.mp3
+        {% elif is_state("input_select.sleep_ambient_sound", "Wood Masted Sailboat") %} http://meditationroom.org/free-nature-sounds/wood-masted-sailboat-audio/wood-masted-sailboat.mp3
+        {% elif is_state("input_select.sleep_ambient_sound", "Tropical Storm") %} http://meditationroom.org/free-nature-sounds/tropical-storm-audio/tropical-storm.mp3
         {% endif %}
       media_content_type: 'audio/mp4'
 
