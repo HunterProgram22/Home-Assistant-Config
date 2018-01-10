@@ -20,6 +20,8 @@ office:
     - light.bottom_track_light
     - light.desk_lamp
     - media_player.office_speaker
+    - media_player.jbl_office_speaker
+    - media_player.office
     - group.radio
 
 garage:
@@ -69,6 +71,7 @@ radio:
     - input_select.chromecast_radio
     - input_number.volume_radio
     - script.radio_play
+    - script.radio_stop
 
 sleep_sounds:
   name: Sleep Sounds
@@ -83,3 +86,22 @@ media:
   entities:
     - media_player.great_room_speaker
     - media_player.great_room_tv
+    - media_player.whole_home
+    - media_player.rec_room_speaker
+    - media_player.rec_room_tv
+    - media_player.master_bedroom_speaker
+    - media_player.master_bedroom_tv
+    - media_player.office_speaker
+    - media_player.jbl_office_speaker
+    - media_player.office
+
+media_players_audio:
+  name: Media Players Audio
+  entities:
+    - media_player.great_room_speaker
+    - media_player.whole_home
+    - media_player.rec_room_speaker
+    - media_player.master_bedroom_speaker
+    - media_player.office_speaker
+    - media_player.jbl_office_speaker
+    - media_player.office

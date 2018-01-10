@@ -68,7 +68,8 @@
     service: media_player.volume_set
     data_template:
       entity_id: >
-        {% if is_state("input_select.chromecast_radio", "Office") %} media_player.office_speaker
+        {% if is_state("input_select.chromecast_radio", "Office") %} media_player.office
+        {% elif is_state("input_select.chromecast_radio", "JBL Office Speaker") %} media_player.jbl_office_speaker
         {% elif is_state("input_select.chromecast_radio", "Great Room") %} media_player.great_room_speaker
         {% elif is_state("input_select.chromecast_radio", "Whole Home") %} media_player.whole_home
         {% elif is_state("input_select.chromecast_radio", "Master Bedroom") %} media_player.master_bedroom_speaker

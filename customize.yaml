@@ -19,3 +19,7 @@ group.sleep_sounds:
 script.radio_play:
   friendly_name: Start Playing
   icon: mdi:play
+
+script.radio_stop:
+  friendly_name: Stop Playing
+  icon: mdi:stop

@@ -54,10 +54,39 @@ rec_room_jeopardy:
 radio_play:
   alias: Play Radio on Chromecast Audio
   sequence:
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.jbl_office_speaker
+      volume_level: '0.20'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.office_speaker
+      volume_level: '0.15'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.great_room_speaker
+      volume_level: '0.30'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.master_bedroom_speaker
+      volume_level: '0.35'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.rec_room_speaker
+      volume_level: '0.35'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.office
+      volume_level: '0.20'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.whole_home
+      volume_level: '0.20'
   - service: media_player.play_media
     data_template:
       entity_id: >
-        {% if is_state("input_select.chromecast_radio", "Office") %} media_player.office_speaker
+        {% if is_state("input_select.chromecast_radio", "Office") %} media_player.office
+        {% elif is_state("input_select.chromecast_radio", "JBL Office Speaker") %} media_player.jbl_office_speaker
         {% elif is_state("input_select.chromecast_radio", "Great Room") %} media_player.great_room_speaker
         {% elif is_state("input_select.chromecast_radio", "Whole Home") %} media_player.whole_home
         {% elif is_state("input_select.chromecast_radio", "Master Bedroom") %} media_player.master_bedroom_speaker
@@ -74,6 +103,12 @@ radio_play:
         {% endif %}
       media_content_type: 'audio/mp4'
 
+radio_stop:
+  alias: Stop Radio
+  sequence:
+    - service: homeassistant.turn_off
+      data:
+        entity_id: group.media_players_audio
 
 sleep_sounds_play:
   alias: Sleeps Sounds on Google Mini

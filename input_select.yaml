@@ -13,6 +13,7 @@ chromecast_radio:
   name: 'Select Speakers:'
   options:
     - Office
+    - JBL Office Speaker
     - Great Room
     - Whole Home
     - Master Bedroom
