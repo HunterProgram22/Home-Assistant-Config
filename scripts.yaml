@@ -39,18 +39,6 @@ rec_room_chromecast_off:
     - service: switch.turn_off
       entity_id: switch.rec_room_outlet
 
-rec_room_jeopardy:
-  alias: "Rec Room Jeopardy Time"
-  sequence:
-    - service: remote.turn_on
-      entity_id: remote.rec_room_hub
-      data:
-        activity: "30863949"
-    - service: light.turn_on
-      entity_id: light.rec_room_lights
-      data:
-        brightness_pct: 25
-
 radio_play:
   alias: Play Radio on Chromecast Audio
   sequence:
@@ -127,20 +115,3 @@ sleep_sounds_play:
         {% elif is_state("input_select.sleep_ambient_sound", "Tropical Storm") %} http://meditationroom.org/free-nature-sounds/tropical-storm-audio/tropical-storm.mp3
         {% endif %}
       media_content_type: 'audio/mp4'
-
-sleep_sounds_timer:
-  alias: "Sleep Sounds Timer"
-  sequence:
-    - delay: '00:{{ states.input_number.sleep_sounds_run_time.state | int }}:00'
-    - service: media_player.turn_off
-      data:
-        entity_id: media_player.master_bedroom_speaker
-
-jeopardy_and_wheel:
-  alias: "Jeopardy and Wheel of Fortune Time"
-  sequence:
-    - service: media_player.play_media
-      data_template:
-        entity_id: media_player.great_room_tv
-        media_content_id: https://www.youtube.com/watch?v=PJBmeqpw3DY
-        media_content_type: video/youtube

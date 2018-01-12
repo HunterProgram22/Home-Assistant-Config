@@ -1,15 +1,3 @@
-default_view:
-  view: yes
-  name: Control
-  icon: mdi:home
-  entities:
-    - group.all_lights
-    - group.all_switches
-    - group.all_scripts
-    - group.all_automations
-    - climate.sensi_thermostat
-
-
 office:
   name: Office
   view: yes
@@ -63,13 +51,18 @@ rec_room:
     - switch.rec_room_outlet
     - remote.rec_room_harmony
 
+great_room:
+  name: Great Room
+  view: yes
+  entities:
+    - media_player.great_room_speaker
+    - media_player.great_room_tv
+
 radio:
   name: Home Radio
-  view: yes
   entities:
     - input_select.radio_station
     - input_select.chromecast_radio
-    - input_number.volume_radio
     - script.radio_play
     - script.radio_stop
 
@@ -78,7 +71,6 @@ sleep_sounds:
   entities:
     - input_select.sleep_ambient_sound
     - script.sleep_sounds_play
-    - input_number.sleep_sounds_run_time
 
 media:
   name: Media Players
@@ -105,3 +97,14 @@ media_players_audio:
     - media_player.office_speaker
     - media_player.jbl_office_speaker
     - media_player.office
+
+default_view:
+  view: yes
+  name: Control
+  icon: mdi:home
+  entities:
+    - group.all_lights
+    - group.all_switches
+    - group.all_scripts
+    - group.all_automations
+    - climate.sensi_thermostat

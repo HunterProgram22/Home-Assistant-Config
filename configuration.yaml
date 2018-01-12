@@ -63,15 +63,14 @@ remote:
     host: !secret rec_room_harmony_ip
 
 
-
 hue:
   bridges:
     - host: !secret hue_ip
 
-#android_ip_webcam:
-# - name: 'Front Yard'
-#    host: 192.168.86.60
-#    scan_interval: 1
+android_ip_webcam:
+  - name: 'Front Yard'
+    host: 192.168.86.60
+    scan_interval: 1
 
 wink:
 
