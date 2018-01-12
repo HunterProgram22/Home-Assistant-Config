@@ -43,3 +43,17 @@
   action:
     service: script.turn_on
     entity_id: script.jeopardy_and_wheel
+
+- alias: 'Bedtime for the Boys'
+  trigger:
+    platform: time
+    at: '20:00:00'
+  action:
+    service: tts.google_say
+    entity_id: media_player.whole_home
+    volume_level: '0.5'
+    data:
+      message: 'Hunter and Tyler it is time for you to brush your teeth and take a
+      bath before you go to bed. If you are good and cooperate with mommy and daddy
+      then maybe there will be a treat waiting for you when you are done with your
+      bath. And remember, Go Lions!'

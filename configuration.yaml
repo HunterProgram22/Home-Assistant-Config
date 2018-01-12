@@ -57,19 +57,6 @@ tts:
 # Cloud
 # cloud:
 
-device_tracker:
-  - platform: nmap_tracker
-    hosts: 192.168.86.0/24
-    exclude:
-      - 192.168.86.1
-      - 192.168.86.23
-      - 192.168.86.10
-      - 192.168.86.12
-      - 192.168.86.20
-      - 192.168.86.30
-
-
-
 remote:
   - platform: harmony
     name: Rec Room Harmony
@@ -89,6 +76,9 @@ wink:
 climate:
   platform: wink
 
+
+###INCLUDE FILES###
+device_tracker: !include device_tracker.yaml
 media_player: !include media_player.yaml
 input_select: !include input_select.yaml
 # input_number: !include input_number.yaml
@@ -96,3 +86,4 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 light: !include lights.yaml
+###END INCLUDE FILES###
