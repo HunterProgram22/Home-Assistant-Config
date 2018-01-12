@@ -57,7 +57,7 @@ radio_play:
   - service: media_player.volume_set
     data:
       entity_id: media_player.jbl_office_speaker
-      volume_level: '0.20'
+      volume_level: '0.10'
   - service: media_player.volume_set
     data:
       entity_id: media_player.office_speaker
@@ -135,3 +135,12 @@ sleep_sounds_timer:
     - service: media_player.turn_off
       data:
         entity_id: media_player.master_bedroom_speaker
+
+jeopardy_and_wheel:
+  alias: "Jeopardy and Wheel of Fortune Time"
+  sequence:
+    - service: media_player.play_media
+      data_template:
+        entity_id: media_player.great_room_tv
+        media_content_id: https://www.youtube.com/watch?v=PJBmeqpw3DY
+        media_content_type: video/youtube

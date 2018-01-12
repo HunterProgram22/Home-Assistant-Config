@@ -1,1 +1,31 @@
+- platform: cast
+  name: Great Room Speaker
+  host: 192.168.86.70
 
+- platform: cast
+  name: Office Speaker
+  host: 192.168.86.72
+
+- platform: cast
+  name: Master Bedroom Speaker
+  host: 192.168.86.74
+
+- platform: cast
+  name: Rec Room Speaker
+  host: 192.168.86.76
+
+- platform: cast
+  name: Great Room TV
+  host: 192.168.86.80
+
+- platform: cast
+  name: Master Bedroom TV
+  host: 192.168.86.82
+
+- platform: cast
+  name: Rec Room TV
+  host: 192.168.86.84
+
+- platform: cast
+  name: JBL Office Speaker
+  host: 192.168.86.90

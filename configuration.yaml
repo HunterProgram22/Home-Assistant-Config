@@ -26,7 +26,11 @@ updater:
 
 
 discovery:
+  # ignore:
+  #   - google_cast
 
+
+media_extractor:
 
 
 # Allows you to issue voice commands from the frontend in enabled browsers
