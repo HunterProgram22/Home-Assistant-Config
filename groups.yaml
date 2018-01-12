@@ -11,6 +11,9 @@ office:
     - media_player.jbl_office_speaker
     - media_player.office
     - group.radio
+    - sensor.google_wifi_status
+    - sensor.google_wifi_uptime
+    - sensor.time
 
 garage:
   name: Garage
@@ -31,6 +34,13 @@ perimeter:
     - group.garage
     - group.porch
     - camera.front_yard
+    - sensor.yr_precipitation
+    - sensor.yr_humidity
+    - sensor.yr_temperature
+    - sensor.yr_wind_speed
+    - sensory.yr_wind_direction
+    - sensor.moon
+    - sensor.daily_crime
 
 master_bedroom:
   name: Master Bedroom
@@ -40,6 +50,8 @@ master_bedroom:
     - group.sleep_sounds
     - media_player.master_bedroom_speaker
     - media_player.master_bedroom_tv
+    - device_tracker.katsiphone
+    - device_tracker.JustinPixel2
 
 rec_room:
   name: Rec Room
