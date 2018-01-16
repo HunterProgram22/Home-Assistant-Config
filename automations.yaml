@@ -24,9 +24,9 @@
       entity_id:
         - light.porch_left
         - light.porch_right
-      data:
-        rgb_color: [255, 0, 0]
-        brightness_pct: 100
+      data_template:
+        rgb_color: ['{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}']
+        brightness: 255
 
 - alias: 'Jeopardy and Wheel of Fortune'
   trigger:
@@ -51,9 +51,18 @@
   action:
     service: tts.google_say
     entity_id: media_player.whole_home
-    volume_level: '0.5'
+    volume_level: '0.8'
     data:
       message: 'Hunter and Tyler it is time for you to brush your teeth and take a
       bath before you go to bed. If you are good and cooperate with mommy and daddy
       then maybe there will be a treat waiting for you when you are done with your
       bath. And remember, Go Lions!'
+
+- alias: 'TEST Automation DirecTV'
+  trigger:
+    platform: time
+    at: '18:59:00'
+  action:
+    - service: notify.channel_ten
+      data_template:
+        message: "Channel changed."
