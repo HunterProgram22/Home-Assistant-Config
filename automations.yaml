@@ -68,5 +68,3 @@
     at: '18:59:00'
   action:
     - service: notify.channel_ten
-      data_template:
-        message: "Channel changed."

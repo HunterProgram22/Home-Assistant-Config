@@ -51,7 +51,7 @@ sun:
 
 # switch:
 #   - platform: rest
-#    
+#
 
 sensor: !include sensors.yaml
 
@@ -81,12 +81,8 @@ wink:
 climate:
   platform: wink
 
-notify:
-  name: channel
-  platform: rest
-  resource: http://192.168.86.143:8080/tv/tune?major=28
-  
-
+shell_command:
+  channel_change: curl "http://192.168.86.142:8080/tv/tune?major=501"
 
 ###INCLUDE FILES###
 notify: !include notify.yaml
