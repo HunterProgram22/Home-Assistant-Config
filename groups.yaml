@@ -98,6 +98,9 @@ media:
     - media_player.office_speaker
     - media_player.jbl_office_speaker
     - media_player.office
+    - media_player.directv_rec_room
+    - media_player.directv_great_room
+    - media_player.directv_master_bedroom
 
 media_players_audio:
   name: Media Players Audio

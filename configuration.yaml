@@ -32,6 +32,7 @@ discovery:
 
 #media_extractor:
 
+#shell_command:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -47,6 +48,10 @@ map:
 
 # Track the sun
 sun:
+
+# switch:
+#   - platform: rest
+#    
 
 sensor: !include sensors.yaml
 
@@ -75,6 +80,12 @@ wink:
 
 climate:
   platform: wink
+
+notify:
+  name: channel
+  platform: rest
+  resource: http://192.168.86.143:8080/tv/tune?major=28
+  
 
 
 ###INCLUDE FILES###
