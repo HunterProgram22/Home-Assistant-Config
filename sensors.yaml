@@ -21,3 +21,25 @@
   - 'time'
 
 - platform: moon
+
+- platform: pi_hole
+  host: 192.168.86.10/admin/api.php
+  monitored_conditions:
+    - ads_percentage_today
+    - dns_queries_today
+    - unique_clients
+
+- platform: speedtest
+  minute: 00
+  hour:
+    - 0
+    - 6
+    - 12
+    - 18
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
+- platform: opensky
+  radius: 10  

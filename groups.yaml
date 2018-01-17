@@ -11,9 +11,19 @@ office:
     - media_player.jbl_office_speaker
     - media_player.office
     - group.radio
+
+network:
+  name: Network
+  view: yes
     - sensor.google_wifi_status
     - sensor.google_wifi_uptime
     - sensor.time
+    - sensor.pi_hole_ads_percentage_today
+    - sensor.pi_hole_dns_queries_today
+    - sensor.pi_hole_unique_clients
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
 
 garage:
   name: Garage
@@ -34,13 +44,19 @@ perimeter:
     - group.garage
     - group.porch
     - camera.front_yard
+    - sensor.daily_crime
+
+aerial:
+  name: Aerial
+  view: yes
+  entities:
+    - sensor.opensky
     - sensor.yr_precipitation
     - sensor.yr_humidity
     - sensor.yr_temperature
     - sensor.yr_wind_speed
     - sensory.yr_wind_direction
     - sensor.moon
-    - sensor.daily_crime
 
 master_bedroom:
   name: Master Bedroom
@@ -50,6 +66,7 @@ master_bedroom:
     - group.sleep_sounds
     - media_player.master_bedroom_speaker
     - media_player.master_bedroom_tv
+    - media_player.directv_master_bedroom
     - device_tracker.katsiphone
     - device_tracker.JustinPixel2
 
@@ -60,6 +77,7 @@ rec_room:
     - light.rec_room_lights
     - media_player.rec_room_speaker
     - media_player.rec_room_tv
+    - media_player.directv_rec_room
     - switch.rec_room_outlet
     - remote.rec_room_harmony
 
@@ -69,6 +87,7 @@ great_room:
   entities:
     - media_player.great_room_speaker
     - media_player.great_room_tv
+    - media_player.directv_great_room
 
 radio:
   name: Home Radio
@@ -86,7 +105,7 @@ sleep_sounds:
 
 media:
   name: Media Players
-  view: yes
+  view: no
   entities:
     - media_player.great_room_speaker
     - media_player.great_room_tv

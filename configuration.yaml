@@ -9,7 +9,7 @@ homeassistant:
 
 
 frontend:
-
+  themes:
 
 config:
 
@@ -71,18 +71,17 @@ hue:
   bridges:
     - host: !secret hue_ip
 
-android_ip_webcam:
-  - name: 'Front Yard'
-    host: 192.168.86.60
-    scan_interval: 1
-
 wink:
 
 climate:
   platform: wink
 
-shell_command:
-  channel_change: curl "http://192.168.86.142:8080/tv/tune?major=501"
+# shell_command:
+#   channel_change: curl "http://192.168.86.142:8080/tv/tune?major=501"
+
+rest_command:
+  channel_change:
+    url: http://192.168.86.142:8080/tv/tune?major=501
 
 ###INCLUDE FILES###
 notify: !include notify.yaml
@@ -94,4 +93,5 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 light: !include lights.yaml
+android_ip_webcam: !include android_ip_webcam.yaml
 ###END INCLUDE FILES###

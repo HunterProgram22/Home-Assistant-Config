@@ -10,6 +10,7 @@
       - light.porch_left
       - light.porch_right
 
+
 - alias: 'Front Lights On at Sunset'
   trigger:
     platform: sun
@@ -28,6 +29,7 @@
         rgb_color: ['{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}']
         brightness: 255
 
+
 - alias: 'Jeopardy and Wheel of Fortune'
   trigger:
     platform: time
@@ -43,6 +45,7 @@
   action:
     service: script.turn_on
     entity_id: script.jeopardy_and_wheel
+
 
 - alias: 'Bedtime for the Boys'
   trigger:
@@ -67,4 +70,8 @@
     platform: time
     at: '18:59:00'
   action:
-    - service: notify.channel_ten
+    - service: rest_command.channel_change
+
+
+  # - alias: 'Extreme Cold'
+  #   trigger:
