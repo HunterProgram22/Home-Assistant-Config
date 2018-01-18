@@ -2,14 +2,14 @@
   host: 192.168.86.60
   scan_interval: 1
   sensors:
-      - audio_connections
-      - battery_level
-      - battery_temp
-      - battery_voltage
-      - light
-      - motion
-    switches:
-      - focus
-      - gps_active
-      - night_vision
-      - video_recording
+    - audio_connections
+    - battery_level
+    - battery_temp
+    - battery_voltage
+    - light
+    - motion
+  switches:
+    - focus
+    - gps_active
+    - night_vision
+    - video_recording

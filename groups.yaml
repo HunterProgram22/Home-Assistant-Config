@@ -15,12 +15,23 @@ office:
 network:
   name: Network
   view: yes
+  entities:
+    - sensor.time
+    - group.internet
+    - group.securpi
+
+securpi:
+  name: SecurPi
+  entities:
+    - sensor.pihole_ads_percentage_blocked_today
+    - sensor.pihole_dns_queries_today
+    - sensor.pihole_dns_unique_clients
+
+internet:
+  name: Internet
+  entities:
     - sensor.google_wifi_status
     - sensor.google_wifi_uptime
-    - sensor.time
-    - sensor.pi_hole_ads_percentage_today
-    - sensor.pi_hole_dns_queries_today
-    - sensor.pi_hole_unique_clients
     - sensor.speedtest_ping
     - sensor.speedtest_download
     - sensor.speedtest_upload
@@ -55,7 +66,7 @@ aerial:
     - sensor.yr_humidity
     - sensor.yr_temperature
     - sensor.yr_wind_speed
-    - sensory.yr_wind_direction
+    - sensor.yr_wind_direction
     - sensor.moon
 
 master_bedroom:

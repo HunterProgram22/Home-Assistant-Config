@@ -9,7 +9,8 @@ homeassistant:
 
 
 frontend:
-  themes:
+  themes: !include dark_theme.yaml 
+
 
 config:
 
@@ -53,7 +54,6 @@ sun:
 #   - platform: rest
 #
 
-sensor: !include sensors.yaml
 
 # Text to speech
 tts:
@@ -76,15 +76,11 @@ wink:
 climate:
   platform: wink
 
-# shell_command:
-#   channel_change: curl "http://192.168.86.142:8080/tv/tune?major=501"
-
-rest_command:
-  channel_change:
-    url: http://192.168.86.142:8080/tv/tune?major=501
 
 ###INCLUDE FILES###
 notify: !include notify.yaml
+sensor: !include sensors.yaml
+rest_command: !include rest_command.yaml
 device_tracker: !include device_tracker.yaml
 media_player: !include media_player.yaml
 input_select: !include input_select.yaml

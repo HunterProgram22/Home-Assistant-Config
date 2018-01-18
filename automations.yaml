@@ -43,8 +43,7 @@
         - thu
         - fri
   action:
-    service: script.turn_on
-    entity_id: script.jeopardy_and_wheel
+    - service: rest_command.great_dtv_channel_ten
 
 
 - alias: 'Bedtime for the Boys'
@@ -63,14 +62,10 @@
         bath before you go to bed. If you are good and cooperate with mommy and daddy
         then maybe there will be a treat waiting for you when you are done with your
         bath. And remember, Go Lions!'
-
-
-- alias: 'TEST Automation DirecTV'
-  trigger:
-    platform: time
-    at: '18:59:00'
-  action:
-    - service: rest_command.channel_change
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.whole_home
+        volume_level: '0.5'
 
 
   # - alias: 'Extreme Cold'
