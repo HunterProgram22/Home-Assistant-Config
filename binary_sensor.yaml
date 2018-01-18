@@ -1,0 +1,9 @@
+- platform: ping
+  host: 192.168.86.1
+  name: Primary Router
+
+- platform: ping
+  host: 192.168.86.23
+  name: Office Hub
+
+  

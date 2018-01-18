@@ -11,6 +11,7 @@
   monitored_conditions:
     - uptime
     - status
+    - local_ip
 
 - platform: crimereports
   name: Daily Crime
@@ -42,4 +43,15 @@
     - upload
 
 - platform: opensky
-  radius: 10  
+  radius: 10
+
+- platform: template
+  sensors:
+    primary_router:
+      friendly_name: "Primary Router"
+      value_template: >-
+        {% if is_state('sensor.primary_router', 'on') %}
+          Transmitting
+        {% else %}
+          Not Transmitting
+        {% endif %}

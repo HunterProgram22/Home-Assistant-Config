@@ -9,7 +9,7 @@ homeassistant:
 
 
 frontend:
-  themes: !include dark_theme.yaml 
+  themes: !include dark_theme.yaml
 
 
 config:
@@ -80,6 +80,7 @@ climate:
 ###INCLUDE FILES###
 notify: !include notify.yaml
 sensor: !include sensors.yaml
+binary_sensor: !include binary_sensor.yaml 
 rest_command: !include rest_command.yaml
 device_tracker: !include device_tracker.yaml
 media_player: !include media_player.yaml
