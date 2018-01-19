@@ -50,7 +50,15 @@
     primary_router:
       friendly_name: "Primary Router"
       value_template: >-
-        {% if is_state('sensor.primary_router', 'on') %}
+        {% if is_state('binary_sensor.primary_router', 'on') %}
+          Transmitting
+        {% else %}
+          Not Transmitting
+        {% endif %}
+    office_hub:
+      friendly_name: "Office Hub"
+      value_template: >-
+        {% if is_state('binary_sensor.office_hub', 'on') %}
           Transmitting
         {% else %}
           Not Transmitting
