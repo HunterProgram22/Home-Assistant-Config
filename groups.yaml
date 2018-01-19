@@ -19,7 +19,7 @@ network:
     - sensor.time
     - group.internet
     - group.securpi
-    - group.devices 
+    - group.devices
 
 securpi:
   name: SecurPi
@@ -34,14 +34,11 @@ internet:
     - sensor.google_wifi_status
     - sensor.google_wifi_uptime
     - sensor.google_wifi_local_ip
+    - sensor.primary_router
+    - sensor.office_hub
     - sensor.speedtest_ping
     - sensor.speedtest_download
     - sensor.speedtest_upload
-
-devices:
-  name: Devices
-  entities:
-    - sensor.primary_router
 
 garage:
   name: Garage
