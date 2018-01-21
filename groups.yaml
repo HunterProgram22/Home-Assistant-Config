@@ -16,10 +16,9 @@ network:
   name: Network
   view: yes
   entities:
-    - sensor.time
     - group.internet
     - group.securpi
-    - group.devices
+    - group.homerpi
 
 securpi:
   name: SecurPi
@@ -27,6 +26,13 @@ securpi:
     - sensor.pihole_ads_percentage_blocked_today
     - sensor.pihole_dns_queries_today
     - sensor.pihole_dns_unique_clients
+
+homerpi:
+  name: HomerPi
+  entities:
+    - sensor.ram_available
+    - sensor.ram_used
+    - sensor.disk_used_home
 
 internet:
   name: Internet
@@ -58,14 +64,20 @@ perimeter:
   entities:
     - group.garage
     - group.porch
+    - group.weather
+    - group.sensor_data
     - camera.front_yard
-    - sensor.daily_crime
+    - group.front_yard_camera
 
-aerial:
-  name: Aerial
-  view: yes
+sensor_data:
+  name: Sensors
   entities:
     - sensor.opensky
+    - sensor.daily_crime
+
+weather:
+  name: Weather
+  entities:
     - sensor.yr_precipitation
     - sensor.yr_humidity
     - sensor.yr_temperature
@@ -120,7 +132,7 @@ sleep_sounds:
 
 media:
   name: Media Players
-  view: no
+  view: yes
   entities:
     - media_player.great_room_speaker
     - media_player.great_room_tv
@@ -146,6 +158,14 @@ media_players_audio:
     - media_player.office_speaker
     - media_player.jbl_office_speaker
     - media_player.office
+
+front_yard_camera:
+  name: Front Yard Camera
+  entities:
+    - switch.front_yard_focus
+    - switch.front_yard_night_vision
+    - switch.front_yard_video_recording
+
 
 default_view:
   view: yes

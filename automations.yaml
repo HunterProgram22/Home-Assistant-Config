@@ -62,10 +62,16 @@
         bath before you go to bed. If you are good and cooperate with mommy and daddy
         then maybe there will be a treat waiting for you when you are done with your
         bath. And remember, Go Lions!'
+    - delay: 00:00:40
     - service: media_player.volume_set
       data:
         entity_id: media_player.whole_home
-        volume_level: '0.5'
+        volume_level: '0.4'
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.whole_home
+        media_content_id:  http://rfcmedia.streamguys1.com/classical.mp3?aw_0_1st.playerid=RadioTime&amp;aw_0_1st.skey=1515186674
+        media_content_type: 'audio/mp4'
 
 
   # - alias: 'Extreme Cold'

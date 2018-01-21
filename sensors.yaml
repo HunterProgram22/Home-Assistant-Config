@@ -15,7 +15,7 @@
 
 - platform: crimereports
   name: Daily Crime
-  radius: 5000
+  radius: 10000
 
 - platform: time_date
   display_options:
@@ -44,6 +44,15 @@
 
 - platform: opensky
   radius: 10
+
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /home
+    - type: memory_free
+    - type: memory_use_percent
+    - type: ipv4_address
+      arg: eth0 
 
 - platform: template
   sensors:
