@@ -72,6 +72,11 @@
         entity_id: media_player.whole_home
         media_content_id:  http://rfcmedia.streamguys1.com/classical.mp3?aw_0_1st.playerid=RadioTime&amp;aw_0_1st.skey=1515186674
         media_content_type: 'audio/mp4'
+    - delay: 00:25:00
+    - service: media_player.media_stop
+      data:
+        entity_id: media_player.whole_home
+
 
 
   # - alias: 'Extreme Cold'
