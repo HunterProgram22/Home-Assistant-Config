@@ -42,45 +42,65 @@
   name: DirecTV Master Bedroom
   host: 192.168.86.141
 
-# - platform: universal
-#   name: Universal Control Great Room
-#   children:
-#     - media_player.great_room_tv
-#     - media_player.directv_great_room
-#   commands:
-#     turn_on:
-#       service: media_player.turn_on
-#       data:
-#         entity_id: media_player.directv_great_room
-#     turn_off:
-#       service: media_player.turn_off
-#       data:
-#         entity_id: media_player.directv_great_room
-#     # volume_up:
-#     #   service: switch.turn_on
-#     #   data:
-#     #     entity_id: switch.living_room_volume_up
-#     # volume_down:
-#     #   service: switch.turn_on
-#     #   data:
-#     #     entity_id: switch.living_room_volume_down
-#     # volume_mute:
-#     #   service: switch.turn_on
-#     #   data:
-#     #     entity_id: switch.living_room_mute
-#     # select_source:
-#     #   service: media_player.select_source
-#     #   data_template:
-#     #     entity_id: media_player.receiver
-#     #     source: '{{ source }}'
-#     volume_set:
-#       service: media_player.volume_set
-#       data_template:
-#         entity_id: media_player.receiver
-#         volume_level: '{{ volume_level }}'
-#   attributes:
-#     state: switch.living_room_tv
-#     is_volume_muted: switch.living_room_mute
-#     volume_level: media_player.receiver|volume_level
-#     source: media_player.receiver|source
-#     source_list: media_player.receiver|source_list
+- platform: universal
+  name: Universal Control Office
+  children:
+    - media_player.jbl_office_speaker
+    - media_player.office_speaker
+  commands:
+    turn_on:
+      service: media_player.turn_on
+      data:
+        entity_id: media_player.jbl_office_speaker
+    turn_off:
+      service: media_player.turn_off
+      data:
+        entity_id: media_player.jbl_office_speaker
+    volume_up:
+      service: media_player.volume_up
+      data:
+        entity_id: media_player.jbl_office_speaker
+    volume_down:
+      service: media_player.jbl_office_speaker
+      data:
+        entity_id: media_player.jbl_office_speaker
+    volume_mute:
+      service: media_player.volume_mute
+      data:
+        entity_id: media_player.jbl_office_speaker
+    media_play:
+      service: media_player.media_play
+      data:
+        entity_id: media_player.jbl_office_speaker
+    media_pause:
+      service: media_player.media_pause
+      data:
+        entity_id: media_player.jbl_office_speaker
+    media_stop:
+      service: media_player.media_stop
+      data:
+        entity_id: media_player.jbl_office_speaker
+    media_next_track:
+      service: media_player.media_next_track
+      data:
+        entity_id: media_player.jbl_office_speaker
+    media_previous_track:
+      service: media_player.media_previous_track
+      data:
+        entity_id: media_player.jbl_office_speaker
+    select_source:
+      service: media_player.select_source
+      data_template:
+        entity_id: media_player.jbl_office_speaker
+        source: '{{ source }}'
+    volume_set:
+      service: media_player.volume_set
+      data_template:
+        entity_id: media_player.jbl_office_speaker
+        volume_level: '{{ volume_level }}'
+  attributes:
+    state: media_player.jbl_office_speaker
+    is_volume_muted: media_player.jbl_office_speaker
+    volume_level: media_player.jbl_office_speaker|volume_level
+    source: media_player.jbl_office_speaker|source
+    source_list: media_player.jbl_office_speaker|source_list

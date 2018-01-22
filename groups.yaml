@@ -10,6 +10,7 @@ office:
     - media_player.office_speaker
     - media_player.jbl_office_speaker
     - media_player.office
+    - media_player.universal_control_office
     - group.radio
 
 network:
