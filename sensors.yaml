@@ -52,7 +52,7 @@
     - type: memory_free
     - type: memory_use_percent
     - type: ipv4_address
-      arg: eth0 
+      arg: eth0
 
 - platform: template
   sensors:
@@ -68,6 +68,14 @@
       friendly_name: "Office Hub"
       value_template: >-
         {% if is_state('binary_sensor.office_hub', 'on') %}
+          Transmitting
+        {% else %}
+          Not Transmitting
+        {% endif %}
+    great_room_hub:
+      friendly_name: "Great Room Hub"
+      value_template: >-
+        {% if is_state('binary_sensor.great_room_hub', 'on') %}
           Transmitting
         {% else %}
           Not Transmitting

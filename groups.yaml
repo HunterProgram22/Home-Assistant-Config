@@ -43,6 +43,7 @@ internet:
     - sensor.google_wifi_local_ip
     - sensor.primary_router
     - sensor.office_hub
+    - sensor.great_room_hub
     - sensor.speedtest_ping
     - sensor.speedtest_download
     - sensor.speedtest_upload

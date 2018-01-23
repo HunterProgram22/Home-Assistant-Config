@@ -6,4 +6,6 @@
   host: 192.168.86.23
   name: Office Hub
 
-  
+- platform: ping
+  host: 192.168.86.146
+  name: Great Room Hub
