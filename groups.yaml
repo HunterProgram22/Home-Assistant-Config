@@ -118,7 +118,7 @@ great_room:
     - media_player.great_room_speaker
     - media_player.great_room_tv
     - media_player.directv_great_room
-    - camera.great_room 
+
 
 radio:
   name: Home Radio
