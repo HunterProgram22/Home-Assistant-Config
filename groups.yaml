@@ -115,10 +115,19 @@ great_room:
   name: Great Room
   view: yes
   entities:
+    - group.great_room_media_center
     - media_player.great_room_speaker
     - media_player.great_room_tv
     - media_player.directv_great_room
 
+great_room_media_center:
+  name: Great Room Media
+  view: no
+  entities:
+    - switch.great_room_tv_power
+    - switch.volume_up
+    - switch.volume_down
+    - switch.volume_mute
 
 radio:
   name: Home Radio

@@ -171,3 +171,62 @@ sleep_sounds_play:
         {% elif is_state("input_select.sleep_ambient_sound", "Tropical Storm") %} http://meditationroom.org/free-nature-sounds/tropical-storm-audio/tropical-storm.mp3
         {% endif %}
       media_content_type: 'audio/mp4'
+
+great_room_tv_on:
+  sequence:
+    - service: broadlink.send_packet_192_168_86_147
+      data:
+        packet:
+          - 'JgBQAAABKJQSExITEjgSExISEhMSExITEjgTNhITEjgSOBI4EjcSOBITEhMSExI3EhMSExITEhMSNxI4EjgSExI3EzcTNxI3EwAFKQABJ0sTAA0FAAAAAAAAAAA=='
+
+great_room_direct_tv_on:
+  sequence:
+    - service: broadlink.send_packet_192_168_86_147
+      data:
+        packet:
+          # TV Antenna Input
+          - 'JgBQAAABKJMTEhMSEjgTEhITEhISExITEjgSNxMSEjgSOBI3EzcSOBI3EjgTNxI3EhMSExITEhMSEhMSExITEhI4EjcSOBI4EgAFKgABJ0sSAA0FAAAAAAAAAAA=='
+    - delay:
+        milliseconds: 1000
+    - service: broadlink.send_packet_192_168_86_147
+      data:
+        packet:
+          # TV Input Select
+          - 'JgBYAAABKJQSExITEjgTEhMSERMSExMSEzcTNhMSEjgSOBI3EzcTNxI3EzcTEhM3ExISExETEhMSExMSEzcSEhM3EzcSNxI4EwAFKQABKEoTAAxaAAEoShMADQU=='
+    - delay:
+        milliseconds: 750
+    - service: broadlink.send_packet_192_168_86_147
+      data:
+        packet:
+          # TV Input Select
+          - 'JgBYAAABKJQSExITEjgTEhMSERMSExMSEzcTNhMSEjgSOBI3EzcTNxI3EzcTEhM3ExISExETEhMSExMSEzcSEhM3EzcSNxI4EwAFKQABKEoTAAxaAAEoShMADQU=='
+
+
+great_room_chromecast_on:
+  sequence:
+    - service: broadlink.send_packet_192_168_86_147
+      data:
+        packet:
+          # TV Antenna Input
+          - 'JgBQAAABKJMTEhMSEjgTEhITEhISExITEjgSNxMSEjgSOBI3EzcSOBI3EjgTNxI3EhMSExITEhMSEhMSExITEhI4EjcSOBI4EgAFKgABJ0sSAA0FAAAAAAAAAAA=='
+    - delay:
+        milliseconds: 1000
+    - service: broadlink.send_packet_192_168_86_147
+      data:
+        packet:
+          # TV Input Select
+          - 'JgBYAAABKJQSExITEjgTEhMSERMSExMSEzcTNhMSEjgSOBI3EzcTNxI3EzcTEhM3ExISExETEhMSExMSEzcSEhM3EzcSNxI4EwAFKQABKEoTAAxaAAEoShMADQU=='
+    - delay:
+        milliseconds: 750
+    - service: broadlink.send_packet_192_168_86_147
+      data:
+        packet:
+          # TV Input Select
+          - 'JgBYAAABKJQSExITEjgTEhMSERMSExMSEzcTNhMSEjgSOBI3EzcTNxI3EzcTEhM3ExISExETEhMSExMSEzcSEhM3EzcSNxI4EwAFKQABKEoTAAxaAAEoShMADQU=='
+    - delay:
+        milliseconds: 750
+    - service: broadlink.send_packet_192_168_86_147
+      data:
+        packet:
+          # TV Input Select
+          - 'JgBYAAABKJQSExITEjgTEhMSERMSExMSEzcTNhMSEjgSOBI3EzcTNxI3EzcTEhM3ExISExETEhMSExMSEzcSEhM3EzcSNxI4EwAFKQABKEoTAAxaAAEoShMADQU=='

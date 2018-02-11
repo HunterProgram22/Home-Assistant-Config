@@ -50,9 +50,8 @@ map:
 # Track the sun
 sun:
 
-# switch:
-#   - platform: rest
-#
+switch: !include switches.yaml
+
 
 
 # Text to speech
@@ -62,10 +61,8 @@ tts:
 # Cloud
 # cloud:
 
-remote:
-  - platform: harmony
-    name: Rec Room Harmony
-    host: !secret rec_room_harmony_ip
+remote: !include remotes.yaml
+
 
 hue:
   bridges:
@@ -80,7 +77,7 @@ climate:
 ###INCLUDE FILES###
 notify: !include notify.yaml
 sensor: !include sensors.yaml
-binary_sensor: !include binary_sensor.yaml 
+binary_sensor: !include binary_sensor.yaml
 rest_command: !include rest_command.yaml
 device_tracker: !include device_tracker.yaml
 media_player: !include media_player.yaml
