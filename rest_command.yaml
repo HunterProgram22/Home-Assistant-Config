@@ -1,2 +1,5 @@
 great_dtv_channel_ten:
   url: http://192.168.86.142:8080/tv/tune?major=10
+
+great_dtv_channel_four:
+  url: http://192.168.86.142:8080/tv/tune?major=4

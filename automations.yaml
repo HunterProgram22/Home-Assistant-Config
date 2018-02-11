@@ -45,6 +45,28 @@
   action:
     - service: rest_command.great_dtv_channel_ten
 
+- alias: 'News at Six'
+  trigger:
+    platform: time
+    at: '17:59:00'
+  condition:
+    - condition: time
+      weekday:
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    - service: script.turn_on
+      entity_id: script.great_room_tv_on
+    - delay: 00:00:05
+    - service: script.turn_on
+      entity_id: script.great_room_direct_tv_on
+    - delay: 00:00:03
+    - service: media_player.turn_on
+      entity_id: media_player.directv_great_room
+    - delay: 00:00:03
+    - service: rest_command.great_dtv_channel_four
 
 - alias: 'Bedtime for the Boys'
   trigger:

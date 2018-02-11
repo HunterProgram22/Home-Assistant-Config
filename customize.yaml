@@ -23,3 +23,19 @@ script.radio_play:
 script.radio_stop:
   friendly_name: Stop Playing
   icon: mdi:stop
+
+switch.great_room_tv_power:
+  friendly_name: GRTV Power
+  icon: mdi:adjust
+
+switch.volume_up:
+  friendly_name: Volume Up
+  icon: mdi:arrow-up-drop-circle
+
+switch.volume_down:
+  friendly_name: Volume Down
+  icon: mdi:arrow-down-drop-circle
+
+switch.volume_mute:
+  friendly_name: Volume Mute
+  icon: mdi:alarm-off
