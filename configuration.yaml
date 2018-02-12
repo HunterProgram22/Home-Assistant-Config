@@ -50,7 +50,7 @@ map:
 # Track the sun
 sun:
 
-switch: !include switches.yaml
+switch: !include_dir_merge_list switches
 
 
 
@@ -61,7 +61,7 @@ tts:
 # Cloud
 # cloud:
 
-remote: !include remotes.yaml
+remote: !include_dir_merge_list remotes
 
 
 hue:
@@ -76,16 +76,16 @@ climate:
 
 ###INCLUDE FILES###
 notify: !include notify.yaml
-sensor: !include sensors.yaml
+sensor: !include_dir_merge_list sensors
 binary_sensor: !include binary_sensor.yaml
 rest_command: !include rest_command.yaml
 device_tracker: !include device_tracker.yaml
 media_player: !include media_player.yaml
 input_select: !include input_select.yaml
 # input_number: !include input_number.yaml
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
-light: !include lights.yaml
+group: !include_dir_merge_named groups
+automation: !include_dir_merge_list automation
+script: !include_dir_merge_named scripts
+light: !include_dir_merge_list lights
 android_ip_webcam: !include android_ip_webcam.yaml
 ###END INCLUDE FILES###

@@ -1,9 +1,0 @@
-  - platform: flux_led
-    automatic_add: False
-    devices:
-      192.168.86.140:
-        name: Top Track Light
-
-  - platform: decora_wifi
-    username: !secret justin_email
-    password: !secret leviton_password

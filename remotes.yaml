@@ -1,3 +1,0 @@
-- platform: harmony
-  name: Rec Room Harmony
-  host: !secret rec_room_harmony_ip
