@@ -3,3 +3,31 @@ great_dtv_channel_ten:
 
 great_dtv_channel_four:
   url: http://192.168.86.142:8080/tv/tune?major=4
+
+great_dtv_channel_twenty_eight:
+  url: http://192.168.86.142:8080/tv/tune?major=28
+
+great_dtv_channel_six:
+  url: http://192.168.86.142:8080/tv/tune?major=6
+
+great_dtv_channel_two_four_two:
+  url: http://192.168.86.142:8080/tv/tune?major=242
+
+
+master_dtv_channel_ten:
+  url: http://192.168.86.141:8080/tv/tune?major=10
+
+master_dtv_channel_four:
+  url: http://192.168.86.141:8080/tv/tune?major=4
+
+master_dtv_channel_twenty_eight:
+  url: http://192.168.86.141:8080/tv/tune?major=28
+
+master_dtv_channel_six:
+  url: http://192.168.86.141:8080/tv/tune?major=6
+
+master_dtv_channel_two_four_two:
+  url: http://192.168.86.141:8080/tv/tune?major=242
+
+master_dtv_channel_five_zero_seven:
+  url: http://192.168.86.141:8080/tv/tune?major=507
