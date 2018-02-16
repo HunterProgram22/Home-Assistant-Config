@@ -1,0 +1,42 @@
+sleep_sounds_play:
+  alias: Sleeps Sounds on Google Mini
+  sequence:
+  - service: media_player.play_media
+    data_template:
+      entity_id:
+        - media_player.master_bedroom_speaker
+      media_content_id: >
+        {% if is_state("input_select.sleep_ambient_sound", "Morning Seashore") %} http://meditationroom.org/free-nature-sounds/morning-seashore-audio/morning-seashore.mp3
+        {% elif is_state("input_select.sleep_ambient_sound", "Forest Walk") %} http://meditationroom.org/free-nature-sounds/forest-walk-audio/forest-walk.mp3
+        {% elif is_state("input_select.sleep_ambient_sound", "Summer Rain") %} http://meditationroom.org/free-nature-sounds/summer-rain-audio/summer-rain.mp3
+        {% elif is_state("input_select.sleep_ambient_sound", "Mountain Stream") %} http://meditationroom.org/free-nature-sounds/mountain-stream-audio/mountain-stream.mp3
+        {% elif is_state("input_select.sleep_ambient_sound", "Rainforest") %} http://meditationroom.org/free-nature-sounds/rainforest-audio/rainforest.mp3
+        {% elif is_state("input_select.sleep_ambient_sound", "Wood Masted Sailboat") %} http://meditationroom.org/free-nature-sounds/wood-masted-sailboat-audio/wood-masted-sailboat.mp3
+        {% elif is_state("input_select.sleep_ambient_sound", "Tropical Storm") %} http://meditationroom.org/free-nature-sounds/tropical-storm-audio/tropical-storm.mp3
+        {% endif %}
+      media_content_type: 'audio/mp4'
+
+
+master_room_tv_nbc:
+  sequence:
+    - service: rest_command.master_dtv_channel_four
+
+master_room_tv_cbs:
+  sequence:
+    - service: rest_command.master_dtv_channel_ten
+
+master_room_tv_fox:
+  sequence:
+    - service: rest_command.master_dtv_channel_twenty_eight
+
+master_room_tv_abc:
+  sequence:
+    - service: rest_command.master_dtv_channel_six
+
+master_room_tv_usa:
+  sequence:
+    - service: rest_command.master_dtv_channel_two_four_two
+
+master_room_tv_hbofam:
+  sequence:
+    - service: rest_command.master_dtv_channel_five_zero_seven

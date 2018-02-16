@@ -1,0 +1,30 @@
+office:
+  name: Office
+  view: yes
+  entities:
+    - light.tall_office_lamp
+    - light.top_track_light
+    - light.middle_track_light
+    - light.bottom_track_light
+    - light.desk_lamp
+    - media_player.office_speaker
+    - media_player.jbl_office_speaker
+    - media_player.office
+    - media_player.universal_control_office
+    - group.radio
+    - group.alerts
+
+radio:
+  name: Home Radio
+  entities:
+    - input_select.radio_station
+    - input_select.chromecast_radio
+    - script.radio_play
+    - script.radio_stop
+
+alerts:
+  name: Alert Levels
+  entities:
+    - script.red_alert
+    - script.yellow_alert
+    - script.code_blue

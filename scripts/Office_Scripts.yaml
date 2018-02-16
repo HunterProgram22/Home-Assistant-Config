@@ -1,0 +1,59 @@
+
+radio_play:
+  alias: Play Radio on Chromecast Audio
+  sequence:
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.jbl_office_speaker
+      volume_level: '0.10'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.office_speaker
+      volume_level: '0.15'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.great_room_speaker
+      volume_level: '0.30'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.master_bedroom_speaker
+      volume_level: '0.35'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.rec_room_speaker
+      volume_level: '0.35'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.office
+      volume_level: '0.20'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.whole_home
+      volume_level: '0.20'
+  - service: media_player.play_media
+    data_template:
+      entity_id: >
+        {% if is_state("input_select.chromecast_radio", "Office") %} media_player.office
+        {% elif is_state("input_select.chromecast_radio", "JBL Office Speaker") %} media_player.jbl_office_speaker
+        {% elif is_state("input_select.chromecast_radio", "Great Room") %} media_player.great_room_speaker
+        {% elif is_state("input_select.chromecast_radio", "Whole Home") %} media_player.whole_home
+        {% elif is_state("input_select.chromecast_radio", "Master Bedroom") %} media_player.master_bedroom_speaker
+        {% elif is_state("input_select.chromecast_radio", "Rec Room") %} media_player.rec_room_speaker
+        {% endif %}
+      media_content_id: >
+        {% if is_state("input_select.radio_station", "ESPN Radio") %} http://us-east.edge-1.cis.abacast.net/direct/espn-networkmp3-48?source=TuneIn
+        {% elif is_state("input_select.radio_station", "Symphony") %} http://rfcmedia.streamguys1.com/classical.mp3?aw_0_1st.playerid=RadioTime&amp;aw_0_1st.skey=1515186674
+        {% elif is_state("input_select.radio_station", "Detroit 97.1") %} http://18773.live.streamtheworld.com:3690/WXYTFMAAC_SC?ua=RadioTime&amp;ttag=RadioTime&amp;DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2&amp;tdtok=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6ImZTeXA4In0.e
+        {% elif is_state("input_select.radio_station", "Columbus 97.1") %} http://15113.live.streamtheworld.com:3690/WBNSFM_SC?ua=RadioTime&amp;ttag=RadioTime&amp;DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2
+        {% elif is_state("input_select.radio_station", "Techno for Programming") %} http://icecast.pulsradio.com/pulsHD.mp3
+        {% elif is_state("input_select.radio_station", "Soundtracks Station") %} http://hi5.streamingsoundtracks.com:80/
+        {% elif is_state("input_select.radio_station", "Classical") %} http://198.105.216.204:8206/stream
+        {% endif %}
+      media_content_type: 'audio/mp4'
+
+radio_stop:
+  alias: Stop Radio
+  sequence:
+    - service: homeassistant.turn_off
+      data:
+        entity_id: group.media_players_audio

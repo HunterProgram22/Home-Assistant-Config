@@ -5,5 +5,11 @@
 !/conf/
 !/conf/apps/
 !*.py
+!/groups/
+!/lights/
+!/remotes/
+!/scripts/
+!/sensors/
+!/switches/
 secrets.yaml
 known_devices.yaml

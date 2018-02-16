@@ -1,0 +1,45 @@
+perimeter:
+  name: Perimeter
+  view: yes
+  entities:
+    - group.garage
+    - group.porch
+    - group.weather
+    - group.sensor_data
+    - camera.front_yard
+    - group.front_yard_camera
+
+garage:
+  name: Garage
+  entities:
+    - light.garage_left
+    - light.garage_right
+
+porch:
+  name: Porch
+  entities:
+    - light.porch_left
+    - light.porch_right
+
+front_yard_camera:
+  name: Front Yard Camera
+  entities:
+    - switch.front_yard_focus
+    - switch.front_yard_night_vision
+    - switch.front_yard_video_recording
+
+weather:
+  name: Weather
+  entities:
+    - sensor.yr_precipitation
+    - sensor.yr_humidity
+    - sensor.yr_temperature
+    - sensor.yr_wind_speed
+    - sensor.yr_wind_direction
+    - sensor.moon
+
+sensor_data:
+  name: Sensors
+  entities:
+    - sensor.opensky
+    - sensor.daily_crime

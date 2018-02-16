@@ -1,0 +1,10 @@
+rec_room:
+  name: Rec Room
+  view: yes
+  entities:
+    - light.rec_room_lights
+    - media_player.rec_room_speaker
+    - media_player.rec_room_tv
+    - media_player.directv_rec_room
+    - switch.rec_room_outlet
+    - remote.rec_room_harmony
