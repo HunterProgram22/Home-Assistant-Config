@@ -1,0 +1,56 @@
+- alias: 'Bedtime for the Boys'
+  trigger:
+    platform: time
+    at: '20:00:00'
+  action:
+    - service: broadlink.send_packet_192_168_86_147
+      data:
+        packet:
+          # Volume Mute
+          - 'JgBQAAABJ5MTExEUEhITEhITEhMTEhITEzcROBM3EhMTNxI4ETgTNxITExISNxMTETgTEhITExITNxI4ERQSNxITEjgSNxM4EwAFQQABJ0oSAA0FAAAAAAAAAAA=='
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.whole_home
+        volume_level: '0.8'
+    - service: tts.google_say
+      data:
+        entity_id: media_player.whole_home
+        message: 'Hunter and Tyler it is time for you to brush your teeth and take a
+        bath before you go to bed. If you are good and cooperate with mommy and daddy
+        then maybe there will be a treat waiting for you when you are done with your
+        bath. And remember, Go Lions!'
+    - delay: 00:00:40
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.jbl_office_speaker
+        volume_level: '0.10'
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.office_speaker
+        volume_level: '0.15'
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.great_room_speaker
+        volume_level: '0.30'
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.master_bedroom_speaker
+        volume_level: '0.35'
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.rec_room_speaker
+        volume_level: '0.35'
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.whole_home
+        media_content_id:  http://rfcmedia.streamguys1.com/classical.mp3?aw_0_1st.playerid=RadioTime&amp;aw_0_1st.skey=1515186674
+        media_content_type: 'audio/mp4'
+    - service: broadlink.send_packet_192_168_86_147
+      data:
+        packet:
+          # TV Power (off)
+          - 'JgBQAAABKJQSExITEjgSExISEhMSExITEjgTNhITEjgSOBI4EjcSOBITEhMSExI3EhMSExITEhMSNxI4EjgSExI3EzcTNxI3EwAFKQABJ0sTAA0FAAAAAAAAAAA=='
+    - delay: 00:25:00
+    - service: media_player.media_stop
+      data:
+        entity_id: media_player.whole_home

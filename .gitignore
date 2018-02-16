@@ -5,6 +5,7 @@
 !/conf/
 !/conf/apps/
 !*.py
+!/automation/
 !/groups/
 !/lights/
 !/remotes/
