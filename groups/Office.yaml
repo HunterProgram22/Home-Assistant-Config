@@ -13,6 +13,7 @@ office:
     - media_player.universal_control_office
     - group.radio
     - group.alerts
+    - group.interviews
 
 radio:
   name: Home Radio
@@ -28,3 +29,11 @@ alerts:
     - script.red_alert
     - script.yellow_alert
     - script.code_blue
+
+interviews:
+  name: Practice Interviews
+  entities:
+    - script.interview_one
+    - script.interview_two
+    - script.interview_three
+    - script.interview_four
