@@ -67,3 +67,143 @@ code_blue:
         entity_id: media_player.office_speaker
         message: "Code Blue, all hands secure from battle stations. Mommy is safely home
         and Zoe is ready to cuddle."
+
+interview_one:
+  alias: “Practice Interview One”
+  sequence:
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.jbl_office_speaker
+      volume_level: ‘0.30’
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: “Hello Justin, thank you for coming to interview today for the clerk of the Court of Claims position. This interview is scheduled for 30 minutes so let us get started right away. First, can you briefly go through your resume and tell us your work experience, particularly as it pertains to the position of clerk of the Court of Claims.”
+  - delay: 00:02:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. Can you please tell us what you know about the clerk of the court of claims position and also the court of claims generally."
+  - delay: 00:02:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. Why do you think you would be a good candidate for the clerk of the court of claims."
+  - delay: 00:01:00
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. Please describe your experience managing people and explain what your management style is."
+  - delay: 00:01:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. Can you tell me what your greatest strength is and also what your greatest weakness is as it pertains to work."
+  - delay: 00:01:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. One of the primary responsbilities of the position of the clerk of the Court of Claims is to insure that the court continues to keep up a high case clearance rate and also
+      to insure that cases are decided in an expeditious manner. Please tell us how you would continue to insure that this happens if you were chosen as clerk of the court of claims."
+  - delay: 00:02:00
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you Justin, that concludes our interview. Do you have any questions for us?"
+
+interview_two:
+  alias: “Practice Interview Two”
+  sequence:
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.jbl_office_speaker
+      volume_level: ‘0.30’
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: “Hello Justin, thank you for coming to interview today for the clerk of the Court of Claims position. This interview is scheduled for 30 minutes so let us get started right away. Please tell us briefly why you applied for the position of clerk of the Court of Claims and why you think you would be the best candidate for the job.”
+  - delay: 00:02:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. Can you please tell what your experience is in case managment and what you would do to insure that the
+      court of claims continues to run smoothly."
+  - delay: 00:02:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. What is your biggest weakness."
+  - delay: 00:01:00
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. Please describe a time when you made a mistake and how you handled it."
+  - delay: 00:01:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. You are of many qualified candidates that we are interviewing for this position. What distinguishes you from them
+      and why should we hire you."
+  - delay: 00:01:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. Can you please elaborate on your experience in process design and managment and give examples of improvements
+      you have implemented sucessfully in your past positions."
+  - delay: 00:02:00
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you Justin, that concludes our interview. Do you have any questions for us?"
+
+interview_three:
+  alias: “Practice Interview Three”
+  sequence:
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.jbl_office_speaker
+      volume_level: ‘0.30’
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: “Hello Justin, thank you for coming to interview today for the clerk of the Court of Claims position. This interview is scheduled for 30 minutes so let us get started right away. Pleas tell us briefly what experience you have that would be relevant to the position of clerk of the court of claims.”
+  - delay: 00:02:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. What can you bring to the position of clerk of the court of claims that other candidates may not be able to offer."
+  - delay: 00:02:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. What are three things your current manager would like you to improve upon."
+  - delay: 00:01:15
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. Please tell me about an accomplishment that you are most proud of."
+  - delay: 00:01:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. What would you like to accomplish in your first year on the job if you are hired as clerk of the court of claims."
+  - delay: 00:01:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. Tell us about a time when you disagreed with your boss and how you handled it."
+  - delay: 00:02:00
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. What are three adjectives that your colleagues would use to describe you and what are three adjectives that your boss would use to describe you."
+  - delay: 00:01:00
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. Please describe some of you relevant leadership experience."
+  - delay: 00:02:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you Justin, that concludes our interview. Do you have any questions for us?"
