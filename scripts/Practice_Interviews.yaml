@@ -138,7 +138,7 @@ interview_three:
       entity_id: media_player.jbl_office_speaker
       message: "Thank you Justin, that concludes our interview. Do you have any questions for us?"
 
-interview_three:
+interview_four:
   alias: “Practice Interview Four”
   sequence:
   - service: media_player.volume_set
@@ -185,6 +185,58 @@ interview_three:
       entity_id: media_player.jbl_office_speaker
       message: "Thank you. Please describe your managerial experience and how you would manage the court of claims"
   - delay: 00:02:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you Justin, that concludes our interview. Do you have any questions for us?"
+
+interview_five:
+  alias: “Practice Interview Five”
+  sequence:
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.jbl_office_speaker
+      volume_level: ‘0.35’
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: “Hello Justin, thank you for coming to interview today for the clerk of the Court of Claims position. This interview is scheduled for 30 minutes so let us get started right away. Please tell us briefly why we should hire you.”
+  - delay: 00:03:00
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. This position involves managing a large office with 25 people. Your management experience seems limited, how would you manage this office."
+  - delay: 00:02:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. How have you handled problematic employees in the past."
+  - delay: 00:01:15
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. What would you do to motivate an underperforming employee."
+  - delay: 00:02:00
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. What would be your goals for your first year on the job."
+  - delay: 00:01:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. What sets you apart from other candidates."
+  - delay: 00:01:30
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. In 60 seconds or less, please convince us to hire you."
+  - delay: 00:01:00
+  - service: tts.google_say
+    data:
+      entity_id: media_player.jbl_office_speaker
+      message: "Thank you. What type of management style do you use."
+  - delay: 00:01:30
   - service: tts.google_say
     data:
       entity_id: media_player.jbl_office_speaker
