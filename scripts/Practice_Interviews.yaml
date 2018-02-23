@@ -138,7 +138,7 @@ interview_three:
       entity_id: media_player.jbl_office_speaker
       message: "Thank you Justin, that concludes our interview. Do you have any questions for us?"
 
-interview_three:
+interview_four:
   alias: “Practice Interview Four”
   sequence:
   - service: media_player.volume_set
