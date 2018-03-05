@@ -1,10 +1,10 @@
 - platform: yr
   monitored_conditions:
-  - precipitation
-  - humidity
-  - temperature
-  - windSpeed
-  - windDirection
+    - precipitation
+    - humidity
+    - temperature
+    - windSpeed
+    - windDirection
 
 - platform: google_wifi
   name: Google Wifi
@@ -53,6 +53,10 @@
     - type: memory_use_percent
     - type: ipv4_address
       arg: eth0
+
+# - platform: dte_energy_bridge
+#   ip: 192.168.86.151
+#   version: 2
 
 - platform: template
   sensors:
