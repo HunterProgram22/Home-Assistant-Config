@@ -52,7 +52,9 @@ sun:
 
 switch: !include_dir_merge_list switches
 
-
+nest:
+  client_id: 7c3b8e1f-93c4-476f-a0ed-5e72bb6c1390
+  client_secret: iOGEG5Z7HUB51IlYw4dvjfADN
 
 # Text to speech
 tts:
