@@ -7,44 +7,6 @@ great_room_tv_on:
     - delay:
         milliseconds: 1000
 
-great_room_direct_tv_on:
-  sequence:
-    - delay:
-        milliseconds: 1000
-    - service: broadlink.send_packet_192_168_86_147
-      data:
-        packet:
-          # Mute and Tv On
-          - 'JgBQAAABJ5MTExEUEhITEhITEhMTEhITEzcROBM3EhMTNxI4ETgTNxITExISNxMTETgTEhITExITNxI4ERQSNxITEjgSNxM4EwAFQQABJ0oSAA0FAAAAAAAAAAA=='
-    - delay:
-        milliseconds: 4000
-    - service: broadlink.send_packet_192_168_86_147
-      data:
-        packet:
-          # TV Antenna Input
-          - 'JgBQAAABKJMTEhMSEjgTEhITEhISExITEjgSNxMSEjgSOBI3EzcSOBI3EjgTNxI3EhMSExITEhMSEhMSExITEhI4EjcSOBI4EgAFKgABJ0sSAA0FAAAAAAAAAAA=='
-    - delay:
-        milliseconds: 2250
-    - service: broadlink.send_packet_192_168_86_147
-      data:
-        packet:
-          # TV Input Select
-          - 'JgBYAAABKJQSExITEjgTEhMSERMSExMSEzcTNhMSEjgSOBI3EzcTNxI3EzcTEhM3ExISExETEhMSExMSEzcSEhM3EzcSNxI4EwAFKQABKEoTAAxaAAEoShMADQU=='
-    - delay:
-        milliseconds: 1500
-    - service: broadlink.send_packet_192_168_86_147
-      data:
-        packet:
-          # TV Input Select
-          - 'JgBYAAABKJQSExITEjgTEhMSERMSExMSEzcTNhMSEjgSOBI3EzcTNxI3EzcTEhM3ExISExETEhMSExMSEzcSEhM3EzcSNxI4EwAFKQABKEoTAAxaAAEoShMADQU=='
-    - delay:
-        milliseconds: 5000
-    - service: broadlink.send_packet_192_168_86_147
-      data:
-        packet:
-          # Unmute
-          - 'JgBQAAABJ5MTExEUEhITEhITEhMTEhITEzcROBM3EhMTNxI4ETgTNxITExISNxMTETgTEhITExITNxI4ERQSNxITEjgSNxM4EwAFQQABJ0oSAA0FAAAAAAAAAAA=='
-
 
 great_room_chromecast_on:
   sequence:
@@ -90,24 +52,3 @@ great_room_chromecast_on:
         packet:
           # Unmute
           - 'JgBQAAABJ5MTExEUEhITEhITEhMTEhITEzcROBM3EhMTNxI4ETgTNxITExISNxMTETgTEhITExITNxI4ERQSNxITEjgSNxM4EwAFQQABJ0oSAA0FAAAAAAAAAAA=='
-
-
-great_room_tv_nbc:
-  sequence:
-    - service: rest_command.great_dtv_channel_four
-
-great_room_tv_cbs:
-  sequence:
-    - service: rest_command.great_dtv_channel_ten
-
-great_room_tv_fox:
-  sequence:
-    - service: rest_command.great_dtv_channel_twenty_eight
-
-great_room_tv_abc:
-  sequence:
-    - service: rest_command.great_dtv_channel_six
-
-great_room_tv_usa:
-  sequence:
-    - service: rest_command.great_dtv_channel_two_four_two
