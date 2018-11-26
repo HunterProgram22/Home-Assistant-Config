@@ -6,8 +6,6 @@ perimeter:
     - group.porch
     - group.weather
     - group.sensor_data
-    - camera.front_yard
-    - group.front_yard_camera
 
 garage:
   name: Garage
@@ -20,13 +18,6 @@ porch:
   entities:
     - light.porch_left
     - light.porch_right
-
-front_yard_camera:
-  name: Front Yard Camera
-  entities:
-    - switch.front_yard_focus
-    - switch.front_yard_night_vision
-    - switch.front_yard_video_recording
 
 weather:
   name: Weather
