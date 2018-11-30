@@ -1,0 +1,78 @@
+media_player.office_speaker:
+  platform: cast
+  unique_id: 41464827-ab38-b246-c19d-1236a8f044fd
+media_player.rec_room_speaker:
+  platform: cast
+  unique_id: b6c5b20b-bf53-83aa-d2a8-a561f6154828
+media_player.master_bedroom_tv:
+  platform: cast
+  unique_id: 73cd5668-b363-0343-510b-8abe927be56c
+media_player.rec_room_tv:
+  platform: cast
+  unique_id: c63d078d-9f1c-0146-88c8-b96f8f4a1d8b
+media_player.jbl_office_speaker:
+  platform: cast
+  unique_id: 8c0265d1-ffd6-3c26-1433-b0dee8e7a4ae
+media_player.great_room_speaker:
+  platform: cast
+  unique_id: 974b51c6-ece4-c148-1dbb-334a92bfcd9a
+media_player.great_room_tv:
+  platform: cast
+  unique_id: 12688282-88b2-2f5a-7bd2-ea2583732962
+media_player.master_bedroom_speaker:
+  platform: cast
+  unique_id: a3197d63-855f-9b85-e2f2-3be67e0dd870
+light.tall_office_lamp:
+  platform: hue
+  unique_id: 00:17:88:01:03:6c:4b:52-0b
+light.garage_right:
+  platform: hue
+  unique_id: 00:17:88:01:02:a3:5b:21-0b
+light.reading_lamp:
+  platform: hue
+  unique_id: 00:17:88:01:03:11:bf:83-0b
+light.porch_right:
+  platform: hue
+  unique_id: 00:17:88:01:02:88:8b:47-0b
+light.bottom_track_light:
+  platform: hue
+  unique_id: 00:17:88:01:02:a3:30:2c-0b
+light.middle_track_light:
+  platform: hue
+  unique_id: 00:17:88:01:02:bc:b0:22-0b
+light.garage_left:
+  platform: hue
+  unique_id: 00:17:88:01:02:bd:0c:2e-0b
+light.porch_left:
+  platform: hue
+  unique_id: 00:17:88:01:02:8f:da:23-0b
+light.desk_lamp:
+  platform: hue
+  unique_id: 00:17:88:01:03:41:e6:18-0b
+switch.rec_room_outlet:
+  platform: wemo
+  unique_id: 221737K0101717
+media_player.whole_home:
+  platform: cast
+  unique_id: 3685d24c-3899-49f9-a65b-808348b276a7
+media_player.office:
+  platform: cast
+  unique_id: 68e1a1e9-56f7-40e3-bf4b-0f86b48323ad
+media_player.great_room_display:
+  platform: cast
+  unique_id: 7201ce25-15af-13d7-94fa-bda83822dc55
+media_player.master_bedroom_display:
+  platform: cast
+  unique_id: 68e233b8-adc8-bd8f-919b-ff952a24ac2f
+media_player.master_bedroom_tv_2:
+  platform: cast
+  unique_id: 2a923331-b9e5-3014-753c-9afd6a1bc929
+media_player.great_room:
+  platform: cast
+  unique_id: f78963ea-ab7c-49cc-9f48-1528ec1db592
+media_player.master_bedroom_group:
+  platform: cast
+  unique_id: 5f987176-979a-41bd-a70a-15345fc34e72
+media_player.office_hub:
+  platform: cast
+  unique_id: a159665f-3b83-e32f-eafa-8031811a1278
