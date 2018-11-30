@@ -80,11 +80,9 @@ climate:
 notify: !include notify.yaml
 sensor: !include_dir_merge_list sensors
 binary_sensor: !include binary_sensor.yaml
-rest_command: !include rest_command.yaml
 device_tracker: !include device_tracker.yaml
 media_player: !include media_player.yaml
 input_select: !include input_select.yaml
-# input_number: !include input_number.yaml
 group: !include_dir_merge_named groups
 automation: !include_dir_merge_list automation
 script: !include_dir_merge_named scripts
