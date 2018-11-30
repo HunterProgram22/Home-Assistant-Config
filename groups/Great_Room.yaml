@@ -7,7 +7,6 @@ great_room:
     - group.great_room_channels
     - media_player.great_room_speaker
     - media_player.great_room_tv
-    - media_player.directv_great_room
     - camera.kitchen
 
 great_room_media_center:

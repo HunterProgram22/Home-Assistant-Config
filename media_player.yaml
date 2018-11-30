@@ -30,17 +30,7 @@
   name: JBL Office Speaker
   host: 192.168.86.90
 
-- platform: directv
-  name: DirecTV Great Room
-  host: 192.168.86.142
 
-- platform: directv
-  name: DirecTV Rec Room
-  host: 192.168.86.143
-
-- platform: directv
-  name: DirecTV Master Bedroom
-  host: 192.168.86.141
 
 # - platform: universal
 #   name: Universal Control Office
