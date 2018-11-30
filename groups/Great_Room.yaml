@@ -2,12 +2,13 @@ great_room:
   name: Great Room
   view: yes
   entities:
-    - light.great_room_lights 
+    - light.great_room_lights
     - group.great_room_media_center
     - group.great_room_channels
     - media_player.great_room_speaker
     - media_player.great_room_tv
     - media_player.directv_great_room
+    - camera.kitchen
 
 great_room_media_center:
   name: Great Room Media

@@ -18,6 +18,7 @@ porch:
   entities:
     - light.porch_left
     - light.porch_right
+    - camera.front_door
 
 weather:
   name: Weather
