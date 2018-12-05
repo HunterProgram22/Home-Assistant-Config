@@ -50,8 +50,6 @@ map:
 # Track the sun
 sun:
 
-switch: !include_dir_merge_list switches
-
 nest:
   client_id: 7c3b8e1f-93c4-476f-a0ed-5e72bb6c1390
   client_secret: iOGEG5Z7HUB51IlYw4dvjfADN
@@ -62,9 +60,6 @@ tts:
 
 # Cloud
 # cloud:
-
-remote: !include_dir_merge_list remotes
-
 
 hue:
   bridges:
@@ -77,7 +72,6 @@ climate:
 
 
 ###INCLUDE FILES###
-notify: !include notify.yaml
 sensor: !include_dir_merge_list sensors
 binary_sensor: !include binary_sensor.yaml
 device_tracker: !include device_tracker.yaml
@@ -87,5 +81,6 @@ group: !include_dir_merge_named groups
 automation: !include_dir_merge_list automation
 script: !include_dir_merge_named scripts
 light: !include_dir_merge_list lights
-
+switch: !include_dir_merge_list switches
+remote: !include_dir_merge_list remotes
 ###END INCLUDE FILES###

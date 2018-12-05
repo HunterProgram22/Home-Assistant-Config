@@ -1,3 +1,0 @@
-- name: channel_ten
-  platform: rest
-  resource: http://192.168.86.142:8080/info/getLocations
