@@ -7,7 +7,7 @@ office:
     - light.middle_track_light
     - light.bottom_track_light
     - light.desk_lamp
-    - media_player.office_speaker
+    - media_player.office_hub
     - media_player.jbl_office_speaker
     - media_player.office
     - media_player.universal_control_office

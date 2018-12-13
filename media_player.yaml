@@ -1,96 +1,100 @@
-- platform: cast
-  name: Great Room Speaker
-  host: 192.168.86.70
-
-- platform: cast
-  name: Office Speaker
-  host: 192.168.86.72
-
-- platform: cast
-  name: Master Bedroom Speaker
-  host: 192.168.86.74
-
-- platform: cast
-  name: Rec Room Speaker
-  host: 192.168.86.76
-
-- platform: cast
-  name: Great Room TV
-  host: 192.168.86.80
-
-- platform: cast
-  name: Master Bedroom TV
-  host: 192.168.86.82
-
-- platform: cast
-  name: Rec Room TV
-  host: 192.168.86.84
-
-- platform: cast
-  name: JBL Office Speaker
-  host: 192.168.86.90
-
-
-
-# - platform: universal
-#   name: Universal Control Office
-#   children:
-#     - media_player.jbl_office_speaker
-#     - media_player.office_speaker
-#   commands:
-#     turn_on:
-#       service: media_player.turn_on
-#       data:
-#         entity_id: media_player.jbl_office_speaker
-#     turn_off:
-#       service: media_player.turn_off
-#       data:
-#         entity_id: media_player.jbl_office_speaker
-#     volume_up:
-#       service: media_player.volume_up
-#       data:
-#         entity_id: media_player.jbl_office_speaker
-#     volume_down:
-#       service: media_player.jbl_office_speaker
-#       data:
-#         entity_id: media_player.jbl_office_speaker
-#     volume_mute:
-#       service: media_player.volume_mute
-#       data:
-#         entity_id: media_player.jbl_office_speaker
-#     media_play:
-#       service: media_player.media_play
-#       data:
-#         entity_id: media_player.jbl_office_speaker
-#     media_pause:
-#       service: media_player.media_pause
-#       data:
-#         entity_id: media_player.jbl_office_speaker
-#     media_stop:
-#       service: media_player.media_stop
-#       data:
-#         entity_id: media_player.jbl_office_speaker
-#     media_next_track:
-#       service: media_player.media_next_track
-#       data:
-#         entity_id: media_player.jbl_office_speaker
-#     media_previous_track:
-#       service: media_player.media_previous_track
-#       data:
-#         entity_id: media_player.jbl_office_speaker
-#     select_source:
-#       service: media_player.select_source
-#       data_template:
-#         entity_id: media_player.jbl_office_speaker
-#         source: '{{ source }}'
-#     volume_set:
-#       service: media_player.volume_set
-#       data_template:
-#         entity_id: media_player.jbl_office_speaker
-#         volume_level: '{{ volume_level }}'
-#   attributes:
-#     state: media_player.jbl_office_speaker
-#     is_volume_muted: media_player.jbl_office_speaker
-#     volume_level: media_player.jbl_office_speaker|volume_level
-#     source: media_player.jbl_office_speaker|source
-#     source_list: media_player.jbl_office_speaker|source_list
+# - platform: cast
+#   name: Rec Room Speaker
+#   host: 192.168.86.70
+#
+# - platform: cast
+#   name: Office Hub
+#   host: 192.168.86.71
+#
+# - platform: cast
+#   name: Master Bedroom Speaker
+#   host: 192.168.86.72
+#
+# - platform: cast
+#   name: Great Room Speaker
+#   host: 192.168.86.74
+#
+# - platform: cast
+#   name: Playroom Speaker
+#   host: 192.168.86.76
+#
+# - platform: cast
+#   name: Great Room TV
+#   host: 192.168.86.80
+#
+# - platform: cast
+#   name: Master Bedroom TV
+#   host: 192.168.86.82
+#
+# - platform: cast
+#   name: Rec Room TV
+#   host: 192.168.86.84
+#
+# - platform: cast
+#   name: JBL Office Speaker
+#   host: 192.168.86.90
+#
+#
+#
+# # - platform: universal
+# #   name: Universal Control Office
+# #   children:
+# #     - media_player.jbl_office_speaker
+# #     - media_player.office_speaker
+# #   commands:
+# #     turn_on:
+# #       service: media_player.turn_on
+# #       data:
+# #         entity_id: media_player.jbl_office_speaker
+# #     turn_off:
+# #       service: media_player.turn_off
+# #       data:
+# #         entity_id: media_player.jbl_office_speaker
+# #     volume_up:
+# #       service: media_player.volume_up
+# #       data:
+# #         entity_id: media_player.jbl_office_speaker
+# #     volume_down:
+# #       service: media_player.jbl_office_speaker
+# #       data:
+# #         entity_id: media_player.jbl_office_speaker
+# #     volume_mute:
+# #       service: media_player.volume_mute
+# #       data:
+# #         entity_id: media_player.jbl_office_speaker
+# #     media_play:
+# #       service: media_player.media_play
+# #       data:
+# #         entity_id: media_player.jbl_office_speaker
+# #     media_pause:
+# #       service: media_player.media_pause
+# #       data:
+# #         entity_id: media_player.jbl_office_speaker
+# #     media_stop:
+# #       service: media_player.media_stop
+# #       data:
+# #         entity_id: media_player.jbl_office_speaker
+# #     media_next_track:
+# #       service: media_player.media_next_track
+# #       data:
+# #         entity_id: media_player.jbl_office_speaker
+# #     media_previous_track:
+# #       service: media_player.media_previous_track
+# #       data:
+# #         entity_id: media_player.jbl_office_speaker
+# #     select_source:
+# #       service: media_player.select_source
+# #       data_template:
+# #         entity_id: media_player.jbl_office_speaker
+# #         source: '{{ source }}'
+# #     volume_set:
+# #       service: media_player.volume_set
+# #       data_template:
+# #         entity_id: media_player.jbl_office_speaker
+# #         volume_level: '{{ volume_level }}'
+# #   attributes:
+# #     state: media_player.jbl_office_speaker
+# #     is_volume_muted: media_player.jbl_office_speaker
+# #     volume_level: media_player.jbl_office_speaker|volume_level
+# #     source: media_player.jbl_office_speaker|source
+# #     source_list: media_player.jbl_office_speaker|source_list

@@ -6,6 +6,7 @@ master_bedroom:
     - group.master_bedroom_channels
     - group.sleep_sounds
     - media_player.master_bedroom_speaker
+    - media_player.master_bedroom_display
     - media_player.master_bedroom_tv
     - device_tracker.katsiphone
     - device_tracker.JustinPixel2

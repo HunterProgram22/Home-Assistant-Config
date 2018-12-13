@@ -6,6 +6,9 @@ homeassistant:
   unit_system: imperial
   time_zone: America/New_York
   customize: !include customize.yaml
+  auth_providers:
+    - type: homeassistant
+    - type: trusted_networks
 
 
 frontend:
@@ -16,7 +19,9 @@ config:
 
 
 http:
-  api_password: !secret http_password
+  trusted_networks:
+    - 192.168.0.0/24
+  # api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   # base_url: example.duckdns.org:8123
 
@@ -69,6 +74,9 @@ wink:
 
 climate:
   platform: wink
+
+lovelace:
+  mode: yaml
 
 
 ###INCLUDE FILES###
