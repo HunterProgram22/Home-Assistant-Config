@@ -20,7 +20,7 @@ config:
 
 http:
   trusted_networks:
-    - 192.168.0.0/24
+    - 192.168.86.0/24
   # api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   # base_url: example.duckdns.org:8123

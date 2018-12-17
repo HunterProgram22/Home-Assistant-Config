@@ -1,10 +1,36 @@
-title: My Awesome Home
+title: KudelaCorp Headquarters
 views:
     # View tab title.
-  - title: Example
+  - icon: mdi:home-assistant
+    title: Example
     cards:
-        # The markdown card will render markdown text.
-      - type: markdown
-        title: Lovelace
-        content: >
-          Welcome to your **Lovelace UI**.
+      - type: entities
+        title: Lights
+        show_head_toggle: true
+        entities:
+          - group.all_lights
+          - light.porch
+      - type: media-control
+        entity: media_player.master_bedroom_display
+      - type: entities
+        title: Media Players
+        entities:
+          - entity: media_player.great_room_tv
+            name: Great Room TV
+          - entity: media_player.master_bedroom_display
+            name: Master Bedroom Hub
+      - type: thermostat
+        entity: climate.sensi_thermostat
+      - type: picture-glance
+        title: Front Door
+        entities:
+          - light.porch
+        camera_image: camera.front_door
+      - type: history-graph
+        title: 'Motion Detection'
+        entities:
+          - binary_sensor.front_door_camera_person_detected
+  - title: Media Players
+    cards:
+      - type: media-control
+        entity: media_player.playroom_speaker
