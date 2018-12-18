@@ -4,12 +4,7 @@ views:
   - icon: mdi:home-assistant
     title: Example
     cards:
-      - type: entities
-        title: Lights
-        show_head_toggle: true
-        entities:
-          - group.all_lights
-          - light.porch
+
       - type: media-control
         entity: media_player.master_bedroom_display
       - type: thermostat
@@ -27,12 +22,32 @@ views:
   - icon: mdi:lightbulb-outline
     title: Lights
     cards:
-      - type: light
-        entity: light.tall_office_lamp
-        name: Tall Office Lamp
+      - type: entities
+        show_head_toggle: false
+        entities:
+          - group.all_lights
       - type: light
         entity: light.great_room_lights
         name: Great Room Lights
+      - type: light
+        entity: light.rec_room_lights
+        name: Rec Room Lights
+      - type: light
+        entity: light.porch
+        name: Porch Lights
+      - type: light
+        entity: light.garage
+        name: Garage Lights
+      - type: light
+        entity: light.tall_office_lamp
+        name: Tall Office Lamp
+
+  - icon: mdi:network-outline
+    title: Network
+    cards:
+      - type: sensor
+        entity: sensor.google_wifi_status
+        name: Google Wifi Status
 
   - title: Media Players
     cards:
