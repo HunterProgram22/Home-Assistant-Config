@@ -12,13 +12,6 @@ views:
           - light.porch
       - type: media-control
         entity: media_player.master_bedroom_display
-      - type: entities
-        title: Media Players
-        entities:
-          - entity: media_player.great_room_tv
-            name: Great Room TV
-          - entity: media_player.master_bedroom_display
-            name: Master Bedroom Hub
       - type: thermostat
         entity: climate.sensi_thermostat
       - type: picture-glance
@@ -34,3 +27,23 @@ views:
     cards:
       - type: media-control
         entity: media_player.playroom_speaker
+      - type: media-control
+        entity: media_player.master_bedroom_display
+      - type: media-control
+        entity: media_player.master_bedroom_tv_2
+      - type: media-control
+        entity: media_player.master_bedroom_speaker
+      - type: media-control
+        entity: media_player.jbl_office_speaker
+      - type: media-control
+        entity: media_player.office_hub
+      - type: media-control
+        entity: media_player.great_room_tv
+      - type: media-control
+        entity: media_player.great_room_display
+      - type: media-control
+        entity: media_player.great_room_speaker
+      - type: media-control
+        entity: media_player.rec_room_speaker
+      - type: media-control
+        entity: media_player.rec_room_tv
