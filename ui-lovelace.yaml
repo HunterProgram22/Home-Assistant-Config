@@ -1,23 +1,30 @@
 title: KudelaCorp Headquarters
 views:
 
-  - icon: mdi:home-assistant
-    title: Example
-    cards:
-
-      - type: media-control
-        entity: media_player.master_bedroom_display
-      - type: thermostat
-        entity: climate.sensi_thermostat
-      - type: picture-glance
-        title: Front Door
-        entities:
-          - light.porch
-        camera_image: camera.front_door
-      - type: history-graph
-        title: 'Motion Detection'
-        entities:
-          - binary_sensor.front_door_camera_motion_detected
+  - icon: mdi:cctv
+    title: Security
+    - type: vertical-stack
+      cards:
+        - type: picture-glance
+          title: Front Door
+          entities:
+            - light.porch
+          camera_image: camera.front_door
+        - type: history-graph
+          title: 'Front Door Motion Detection'
+          entities:
+            - binary_sensor.front_door_camera_motion_detected
+    - type: vertical-stack
+      cards:
+        - type: picture-glance
+          title: Back Door
+          entities:
+            - light.sink
+          camera_image: camera.kitchen
+        - type: history-graph
+          title: 'Back Door Motion Detection'
+          entities:
+            - binary_sensor.kitchen_camera_motion_detected
 
   - icon: mdi:lightbulb-outline
     title: Lights
@@ -48,11 +55,18 @@ views:
       - type: glance
         title: Internet Status
         entities:
-          - sensor.google_wifi_status
-          - sensor.google_wifi_local_ip
-          - sensor.google_wifi_uptime
+          - entity: sensor.google_wifi_status
+            name: Status
+          - entity: sensor.google_wifi_local_ip
+            name: Local IP
+          - entity: sensor.google_wifi_uptime
+            name: Uptime
           - entity: binary_sensor.primary_router
-            name: Primary (Basement) Router
+            name: Router
+
+      # - type: thermostat
+      #   entity: climate.sensi_thermostat
+
 
   - title: Media Players
     cards:
