@@ -3,6 +3,7 @@ views:
 
   - icon: mdi:security
     title: Security
+    cards:
     - type: vertical-stack
       cards:
         - type: picture-glance
