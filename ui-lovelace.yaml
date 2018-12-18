@@ -17,7 +17,7 @@ views:
       - type: history-graph
         title: 'Motion Detection'
         entities:
-          - binary_sensor.front_door_camera_person_detected
+          - binary_sensor.front_door_camera_motion_detected
 
   - icon: mdi:lightbulb-outline
     title: Lights
@@ -39,15 +39,18 @@ views:
         entity: light.garage
         name: Garage Lights
       - type: light
-        entity: light.tall_office_lamp
-        name: Tall Office Lamp
+        entity: light.office
+        name: Office Lights
 
   - icon: mdi:access-point-network
     title: Network
     cards:
-      - type: sensor
-        entity: sensor.google_wifi_status
-        name: Google Wifi Status
+      - type: glance
+        title: Internet Status
+        entities:
+          - sensor.google_wifi_status
+          - sensor.google_wifi_local_ip
+          - sensor.google_wifi_uptime
 
   - title: Media Players
     cards:
