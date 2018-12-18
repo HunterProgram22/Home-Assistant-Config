@@ -27,6 +27,7 @@ views:
           entities:
             - binary_sensor.kitchen_camera_motion_detected
 
+
   - icon: mdi:lightbulb-outline
     title: Lights
     cards:
@@ -50,6 +51,19 @@ views:
         entity: light.office
         name: Office Lights
 
+
+  - icon: mdi:oil-temperature
+    title: Climate and Automations
+    cards:
+      - type: thermostat
+        entity: climate.sensi_thermostat
+      - type: entities
+        entities:
+          - automation.front_lights_on_at_sunset
+          - automation.front_lights_on_at_sunset_christmas
+          - automation.front_lights_off_at_sunrise
+
+
   - icon: mdi:access-point-network
     title: Network
     cards:
@@ -64,9 +78,6 @@ views:
             name: Uptime
           - entity: binary_sensor.primary_router
             name: Router
-
-      # - type: thermostat
-      #   entity: climate.sensi_thermostat
 
 
   - title: Media Players
