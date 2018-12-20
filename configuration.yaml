@@ -88,7 +88,6 @@ lovelace:
 sensor: !include_dir_merge_list sensors
 binary_sensor: !include binary_sensor.yaml
 device_tracker: !include device_tracker.yaml
-media_player: !include media_player.yaml
 input_select: !include input_select.yaml
 group: !include_dir_merge_named groups
 automation: !include_dir_merge_list automation
