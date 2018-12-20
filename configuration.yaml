@@ -75,8 +75,13 @@ wink:
 climate:
   platform: wink
 
+weather:
+  - platform: darksky
+    api_key: 758ee8f868d02bad17fcb360192cbcdd
+
 lovelace:
   mode: yaml
+
 
 
 ###INCLUDE FILES###

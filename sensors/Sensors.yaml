@@ -45,23 +45,6 @@
 - platform: opensky
   radius: 10
 
-- platform: darksky
-  api_key: 758ee8f868d02bad17fcb360192cbcdd
-  forecast:
-    - 0
-    - 1
-    - 2
-    - 3
-  monitored_conditions:
-    - summary
-    - icon
-    - temperature
-    - nearest_storm_distance
-  update_interval:
-    days: 0
-    hours: 0
-    minutes: 5
-
 - platform: systemmonitor
   resources:
     - type: disk_use_percent
