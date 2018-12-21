@@ -50,6 +50,9 @@ views:
       - type: light
         entity: light.office
         name: Office Lights
+      - type: light
+        entity: light.sink_light
+        name: Kitchen Lights
 
 
   - icon: mdi:oil-temperature
