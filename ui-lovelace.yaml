@@ -111,14 +111,23 @@ views:
         entity: media_player.rec_room_tv
 
 
-  - title: Automations
+  - title: Routines
     cards:
       - type: entities
         title: Automations
         entities:
         - entity: automation.front_lights_off_at_sunrise
           name: Front Lights Off Sunrise
-        - entity: automation.front_lights_on_at_sunrise
+        - entity: automation.front_lights_on_at_sunset
           name: Front Lights On Sunset
         - entity: automation.front_lights_on_at_sunset_christmas
           name: Front Lights On Sunset Christmas
+      - type: entities
+        title: Alert Levels
+        entities:
+        - entity: script.red_alert
+          name: Red Alert
+        - entity: script.yellow_alert
+          name: Yellow Alert
+        - entity: script.code_blue
+          name: Code Blue
