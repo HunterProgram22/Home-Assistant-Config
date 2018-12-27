@@ -53,7 +53,8 @@ views:
       - type: light
         entity: light.kitchen_lights
         name: Kitchen Lights
-      - type: light.sink_light
+      - type: light
+        entity: light.sink_light
         name: Sink Light
 
 
