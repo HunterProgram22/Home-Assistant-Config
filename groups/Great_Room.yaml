@@ -1,0 +1,29 @@
+great_room:
+  name: Great Room
+  view: yes
+  entities:
+    - light.great_room_lights
+    - group.great_room_media_center
+    - group.great_room_channels
+    - media_player.great_room_speaker
+    - media_player.great_room_display
+    - media_player.great_room_tv
+    - camera.kitchen
+
+great_room_media_center:
+  name: Great Room Media
+  entities:
+    - switch.great_room_tv_power
+    - switch.volume_up
+    - switch.volume_down
+    - switch.volume_mute
+    - switch.input_select
+
+great_room_channels:
+  name: Great Room Channels
+  entities:
+    - script.great_room_tv_nbc
+    - script.great_room_tv_cbs
+    - script.great_room_tv_abc
+    - script.great_room_tv_fox
+    - script.great_room_tv_usa

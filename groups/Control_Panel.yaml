@@ -1,0 +1,40 @@
+default_view:
+  view: yes
+  name: Control
+  icon: mdi:home
+  entities:
+    - group.all_lights
+    - group.all_switches
+    - group.all_scripts
+    - group.all_automations
+    - climate.sensi_thermostat
+
+media:
+  name: Media Players
+  entities:
+    - media_player.great_room_speaker
+    - media_player.great_room_tv
+    - media_player.great_room_display
+    - media_player.whole_home
+    - media_player.rec_room_speaker
+    - media_player.rec_room_tv
+    - media_player.master_bedroom_speaker
+    - media_player.master_bedroom_tv
+    - media_player.master_bedroom_display
+    - media_player.office_hub
+    - media_player.playroom_speaker
+    - media_player.jbl_office_speaker
+    - media_player.office
+    - media_player.directv_rec_room
+
+
+media_players_audio:
+  name: Media Players Audio
+  entities:
+    - media_player.great_room_speaker
+    - media_player.whole_home
+    - media_player.rec_room_speaker
+    - media_player.master_bedroom_speaker
+    - media_player.office_speaker
+    - media_player.jbl_office_speaker
+    - media_player.office

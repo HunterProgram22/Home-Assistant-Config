@@ -1,0 +1,28 @@
+master_bedroom:
+  name: Master Bedroom
+  view: yes
+  entities:
+    - light.reading_lamp
+    - group.master_bedroom_channels
+    - group.sleep_sounds
+    - media_player.master_bedroom_speaker
+    - media_player.master_bedroom_display
+    - media_player.master_bedroom_tv
+    - device_tracker.katsiphone
+    - device_tracker.JustinPixel2
+
+sleep_sounds:
+  name: Sleep Sounds
+  entities:
+    - input_select.sleep_ambient_sound
+    - script.sleep_sounds_play
+
+master_bedroom_channels:
+  name: Master Bedroom Channels
+  entities:
+    - script.master_room_tv_nbc
+    - script.master_room_tv_cbs
+    - script.master_room_tv_abc
+    - script.master_room_tv_fox
+    - script.master_room_tv_usa
+    - script.master_room_tv_hbofam

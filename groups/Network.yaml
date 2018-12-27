@@ -1,0 +1,34 @@
+network:
+  name: Network
+  view: yes
+  entities:
+    - group.internet
+    - group.securpi
+    - group.homerpi
+
+securpi:
+  name: SecurPi
+  entities:
+    - sensor.pihole_ads_percentage_blocked_today
+    - sensor.pihole_dns_queries_today
+    - sensor.pihole_dns_unique_clients
+
+homerpi:
+  name: HomerPi
+  entities:
+    - sensor.ram_available
+    - sensor.ram_used
+    - sensor.disk_used_home
+
+internet:
+  name: Internet
+  entities:
+    - sensor.google_wifi_status
+    - sensor.google_wifi_uptime
+    - sensor.google_wifi_local_ip
+    - sensor.primary_router
+    - sensor.office_hub
+    - sensor.great_room_hub
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
