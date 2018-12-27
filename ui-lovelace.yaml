@@ -51,7 +51,9 @@ views:
         entity: light.office
         name: Office Lights
       - type: light
-        entity: light.sink_light
+        entities:
+          - light.sink_light
+          - light.kitchen_lights
         name: Kitchen Lights
 
 
