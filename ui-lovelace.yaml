@@ -114,6 +114,7 @@ views:
   - title: Automations
     cards:
       - type: entities
+        title: Automations
         - entity: automation.front_lights_off_at_sunrise
           name: Front Lights Off Sunrise
         - entity: automation.front_lights_on_at_sunrise
