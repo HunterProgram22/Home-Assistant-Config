@@ -117,6 +117,19 @@ views:
   - title: Routines
     cards:
       - type: entities
+        title: Great Room Remote
+        show_header_toggle: false
+        entities:
+          - entity: switch.tv
+            name: TV Power
+          - entity: switch.sound_bar_vol_up
+            name: Volume Up
+          - entity: switch.sound_bar_vol_down
+            name: Volume Down
+          - entity: switch.sound_bar_vol_mute
+            name: Mute
+
+      - type: entities
         title: Automations
         entities:
         - entity: automation.front_lights_off_at_sunrise
