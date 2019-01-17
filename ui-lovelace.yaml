@@ -132,12 +132,15 @@ views:
       - type: entities
         title: Automations
         entities:
+        - entity: automation.lights_on_at_home_arrival
+          name: Lights On At Home Arrival (Tue-Fri)
         - entity: automation.front_lights_off_at_sunrise
           name: Front Lights Off Sunrise
         - entity: automation.front_lights_on_at_sunset
           name: Front Lights On Sunset
         - entity: automation.front_lights_on_at_sunset_christmas
           name: Front Lights On Sunset Christmas
+          
       - type: entities
         title: Alert Levels
         entities:
