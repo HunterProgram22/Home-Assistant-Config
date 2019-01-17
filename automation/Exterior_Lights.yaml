@@ -3,6 +3,7 @@
     platform: time
     at: '18:00:00'
   condition:
+    condition: time
     weekday:
       - tue
       - wed
