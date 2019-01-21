@@ -31,10 +31,10 @@ views:
   - icon: mdi:lightbulb-outline
     title: Lights
     cards:
-      - type: entities
-        show_head_toggle: false
-        entities:
-          - group.all_lights
+      # - type: entities
+        # show_head_toggle: false
+        # entities:
+        #   - group.all_lights
       - type: light
         entity: light.great_room_lights
         name: Great Room Lights
@@ -56,6 +56,12 @@ views:
       - type: light
         entity: light.sink_light
         name: Sink Light
+      - type: light
+        entity: light.deck_lights
+        name: Deck Lights
+      - type: light
+        entity: light.reading_lamp
+        name: Reading Lamp
 
 
   - icon: mdi:oil-temperature
@@ -95,7 +101,7 @@ views:
       - type: media-control
         entity: media_player.master_bedroom_display
       - type: media-control
-        entity: media_player.master_bedroom_tv_2
+        entity: media_player.chromecast0036
       - type: media-control
         entity: media_player.master_bedroom_speaker
       - type: media-control
@@ -140,7 +146,7 @@ views:
           name: Front Lights On Sunset
         - entity: automation.front_lights_on_at_sunset_christmas
           name: Front Lights On Sunset Christmas
-          
+
       - type: entities
         title: Alert Levels
         entities:
