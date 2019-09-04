@@ -156,3 +156,11 @@ views:
           name: Yellow Alert
         - entity: script.code_blue
           name: Code Blue
+
+  # - title: Test
+  #   cards:
+  #     - type: picture-glance
+  #       title: Living room
+  #       entities:
+  #         - lights.reading_lamp
+  #       image: /local/test.png

@@ -9,6 +9,9 @@ homeassistant:
   auth_providers:
     - type: homeassistant
     - type: trusted_networks
+      trusted_networks:
+        - 192.168.86.0/24
+
 
 
 frontend:
@@ -18,9 +21,6 @@ frontend:
 config:
 
 
-http:
-  trusted_networks:
-    - 192.168.86.0/24
   # api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   # base_url: example.duckdns.org:8123
@@ -61,7 +61,8 @@ nest:
 
 # Text to speech
 tts:
-  - platform: google
+  - platform: google_translate
+    service_name: google_say
 
 # Cloud
 # cloud:
@@ -80,7 +81,7 @@ weather:
     api_key: 758ee8f868d02bad17fcb360192cbcdd
 
 lovelace:
-  mode: yaml
+#  mode: yaml
 
 
 ###INCLUDE FILES###
