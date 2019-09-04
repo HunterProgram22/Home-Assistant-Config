@@ -1,0 +1,90 @@
+- alias: 'Lights on at Home Arrival'
+  trigger:
+    platform: time
+    at: '18:00:00'
+  condition:
+    condition: time
+    weekday:
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.kitchen_lights
+        brightness_pct: 50
+    - service: light.turn_on
+      data:
+        entity_id: light.great_room_lights
+        brightness_pct: 35
+
+- alias: 'All Lights off 9 AM'
+  trigger:
+    platform: time
+    at: '9:00:00'
+  condition:
+    condition: time
+    weekday:
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: group.all_lights
+
+- alias: 'Front Lights Off at Sunrise'
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+    service: light.turn_off
+    entity_id:
+      - light.garage_left
+      - light.garage_right
+      - light.porch_left
+      - light.porch_right
+
+
+- alias: 'Front Lights On at Sunset'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:15:00"
+  action:
+    - service: light.turn_on
+      entity_id:
+        - light.garage_left
+        - light.garage_right
+    - service: light.turn_on
+      entity_id:
+        - light.porch_left
+        - light.porch_right
+      data_template:
+        rgb_color: ['{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}']
+        brightness: 255
+
+- alias: 'Front Lights On at Sunset (Christmas)'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:15:00"
+  action:
+    - service: light.turn_on
+      entity_id:
+        - light.garage_left
+        - light.garage_right
+    - service: light.turn_on
+      entity_id:
+        - light.porch_left
+        - light.porch_right
+      data_template:
+        rgb_color: [0, 0, 205]
+        brightness: 255
+    - delay: '02:00:00'
+    - service: light.turn_off
+      entity_id:
+        - light.garage_left
+        - light.garage_right
