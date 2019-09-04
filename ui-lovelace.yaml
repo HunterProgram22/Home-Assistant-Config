@@ -140,6 +140,8 @@ views:
         entities:
         - entity: automation.lights_on_at_home_arrival
           name: Lights On At Home Arrival (Tue-Fri)
+        - entity: automation.all_lights_off_9_am
+          name: Lights Off At 9 AM (Tue-Fri)
         - entity: automation.front_lights_off_at_sunrise
           name: Front Lights Off Sunrise
         - entity: automation.front_lights_on_at_sunset

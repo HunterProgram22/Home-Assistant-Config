@@ -1,0 +1,101 @@
+homeassistant:
+  name: KP Headquarters
+  latitude: !secret latitude_home
+  longitude: !secret longitude_home
+  elevation: 291
+  unit_system: imperial
+  time_zone: America/New_York
+  customize: !include customize.yaml
+  auth_providers:
+    - type: homeassistant
+    - type: trusted_networks
+      trusted_networks:
+        - 192.168.86.0/24
+
+
+frontend:
+  themes: !include dark_theme.yaml
+
+
+config:
+
+
+http:
+  # trusted_networks:
+  #   - 192.168.86.0/24
+  # api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+
+
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+
+discovery:
+  # ignore:
+  #   - google_cast
+
+
+#media_extractor:
+
+#shell_command:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+nest:
+  client_id: 7c3b8e1f-93c4-476f-a0ed-5e72bb6c1390
+  client_secret: iOGEG5Z7HUB51IlYw4dvjfADN
+
+# Text to speech
+tts:
+  - platform: google_translate
+    service_name: google_say
+
+# Cloud
+# cloud:
+
+hue:
+  bridges:
+    - host: !secret hue_ip
+
+wink:
+
+climate:
+  platform: wink
+
+weather:
+  - platform: darksky
+    api_key: 758ee8f868d02bad17fcb360192cbcdd
+
+lovelace:
+#  mode: yaml
+
+
+
+###INCLUDE FILES###
+sensor: !include_dir_merge_list sensors
+binary_sensor: !include binary_sensor.yaml
+device_tracker: !include device_tracker.yaml
+input_select: !include input_select.yaml
+group: !include_dir_merge_named groups
+automation: !include_dir_merge_list automation
+script: !include_dir_merge_named scripts
+light: !include_dir_merge_list lights
+switch: !include_dir_merge_list switches
+remote: !include_dir_merge_list remotes
+###END INCLUDE FILES###
